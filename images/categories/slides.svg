@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Slides">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#26211a"/><stop offset="1" stop-color="#070707"/></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e27a"/><stop offset=".5" stop-color="#d4af37"/><stop offset="1" stop-color="#8a6d1a"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs><rect width="600" height="600" fill="url(#bg)"/>
+<ellipse cx="300" cy="470" rx="230" ry="22" fill="#000" opacity=".55"/>
+<path d="M100 415 C100 392 135 382 200 384 L470 392 C525 396 542 414 526 430 C510 447 452 450 400 448 L170 442 C115 440 100 430 100 415Z" fill="#0b0b0b" stroke="url(#gold)" stroke-width="2"/>
+<path d="M222 388 C240 300 410 302 440 396 L440 412 C408 340 268 338 238 410Z" fill="#141414" stroke="#2b2b2b" stroke-width="3"/>
+<path d="M222 388 C240 300 410 302 440 396 L440 412 C408 340 268 338 238 410Z" fill="url(#shine)"/>
+<rect x="300" y="326" width="48" height="16" rx="8" fill="url(#gold)"/>
+<text x="300" y="560" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="6" fill="#d4af37" opacity=".7">AKINS</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Loafers">
+<defs>
+<radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#26211a"/><stop offset="1" stop-color="#070707"/></radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e27a"/><stop offset=".5" stop-color="#d4af37"/><stop offset="1" stop-color="#8a6d1a"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs><rect width="600" height="600" fill="url(#bg)"/>
+<ellipse cx="300" cy="470" rx="230" ry="22" fill="#000" opacity=".55"/>
+<path d="M105 425 L535 425 L535 450 C535 456 530 460 524 460 L116 460 C110 460 105 456 105 450Z" fill="#0b0b0b" stroke="url(#gold)" stroke-width="2"/>
+<path d="M120 425 L120 380 C120 335 150 305 205 295 L335 272 C385 262 430 282 468 312 C505 335 525 360 525 395 L525 425Z" fill="#141414"/>
+<path d="M120 425 L120 380 C120 335 150 305 205 295 L335 272 C385 262 430 282 468 312 C505 335 525 360 525 395 L525 425Z" fill="url(#shine)"/>
+<path d="M215 300 C260 330 330 335 385 300" fill="none" stroke="#2b2b2b" stroke-width="5"/>
+<rect x="300" y="318" width="70" height="20" rx="10" fill="url(#gold)"/>
+<path d="M200 296 C190 330 210 372 250 392 L180 392 C150 360 150 320 200 296Z" fill="#000" opacity=".5"/>
+<text x="300" y="560" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="6" fill="#d4af37" opacity=".7">AKINS</text>
+</svg>
