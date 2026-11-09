@@ -55,7 +55,10 @@
   const cart = () => load("akins_cart", []);
   const wish = () => load("akins_wish", []);
   const cmp = () => load("akins_cmp", []);
-  const key = (id, size) => id + "|" + (size || "");
+  const key = (id, size, color) => id + "|" + (size || "") + "|" + (color || "");
+  const hasOpts = p => (p.sizes && p.sizes.length) || (p.variants && p.variants.length > 1);
+  const imgFor = (p, color) => ((p.variants || []).find(v => v.label === color) || {}).image || p.image;
+  const opt = l => [l.color, l.size && ("Size " + l.size)].filter(Boolean).join(" · ");
   function toast(msg) { let t = $("#toast"); if (!t) { t = document.createElement("div"); t.id = "toast"; document.body.appendChild(t); } t.textContent = msg; t.classList.add("show"); clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove("show"), 2400); }
   function cartLines(c = cart()) { return c.map(i => { const p = byId(i.id); return p ? { ...i, p, total: p.price * i.qty } : null; }).filter(Boolean); }
   function totals() {
@@ -65,11 +68,12 @@
     const after = sub - disc; const ship = !after ? 0 : after >= C.FREE_SHIPPING_OVER ? 0 : C.FLAT_SHIPPING;
     return { lines, sub, disc, code: cp ? code : "", ship, total: after + ship, count: lines.reduce((a, l) => a + l.qty, 0) };
   }
-  function addToCart(id, size, qty = 1, silent) {
+  function addToCart(id, size, qty = 1, silent, color) {
     const p = byId(id); if (!p) return false;
+    if (p.variants && p.variants.length > 1 && !color) { toast("Please choose a colour"); return false; }
     if (p.sizes && p.sizes.length && !size) { toast("Please choose a shoe size"); return false; }
-    const c = cart(), k = key(id, size), ex = c.find(i => key(i.id, i.size) === k);
-    if (ex) ex.qty += qty; else c.push({ id, size: size || "", qty });
+    const c = cart(), k = key(id, size, color), ex = c.find(i => key(i.id, i.size, i.color) === k);
+    if (ex) ex.qty += qty; else c.push({ id, size: size || "", color: color || "", qty });
     save("akins_cart", c); refresh(); if (!silent) openMini(); return true;
   }
   function toggleWish(id) { let w = wish(); if (w.includes(id)) { w = w.filter(x => x !== id); toast("Removed from wishlist"); } else { w.push(id); toast("Added to wishlist"); } save("akins_wish", w); refresh(); }
@@ -166,7 +170,7 @@
   function renderMini() {
     const el = $("#mini-body"); if (!el) return; const t = totals();
     if (!t.lines.length) { el.innerHTML = `<div class="empty-mini"><p>No products in the cart.</p><a class="btn btn-gold" href="shop.html">Return to shop</a></div>`; return; }
-    el.innerHTML = `<ul class="mini-list">${t.lines.map(l => `<li><a href="product.html?id=${l.p.id}"><img src="${l.p.image}" alt=""></a><div><a class="mn" href="product.html?id=${l.p.id}">${esc(l.p.name)}</a>${l.size ? `<small>Size: ${esc(l.size)}</small>` : ""}<div class="mq">${l.qty} × <b>${fmt(l.p.price)}</b></div></div><button data-rm="${esc(key(l.id, l.size))}" aria-label="Remove">${ic("x", 16)}</button></li>`).join("")}</ul>
+    el.innerHTML = `<ul class="mini-list">${t.lines.map(l => `<li><a href="product.html?id=${l.p.id}"><img src="${imgFor(l.p, l.color)}" alt=""></a><div><a class="mn" href="product.html?id=${l.p.id}">${esc(l.p.name)}</a>${opt(l) ? `<small>${esc(opt(l))}</small>` : ""}<div class="mq">${l.qty} × <b>${fmt(l.p.price)}</b></div></div><button data-rm="${esc(key(l.id, l.size, l.color))}" aria-label="Remove">${ic("x", 16)}</button></li>`).join("")}</ul>
       <div class="mini-sub"><span>Subtotal:</span><b>${fmt(t.sub)}</b></div><div class="mini-btns"><a class="btn btn-outline" href="cart.html">View cart</a><a class="btn btn-gold" href="checkout.html">Checkout</a></div>`;
   }
   function openD(id) { const d = $("#" + id); if (!d) return; $$(".drawer.open,.modal.open").forEach(x => x.classList.remove("open")); d.classList.add("open"); document.body.classList.add("lock"); if (d.classList.contains("drawer")) $(".overlay").classList.add("show"); }
@@ -175,17 +179,17 @@
 
   /* ---------- product card / grid ---------- */
   function card(p) {
-    const b = pct(p), hasSize = p.sizes && p.sizes.length;
+    const b = pct(p), hasSize = hasOpts(p);
     return `<article class="pcard" data-id="${p.id}">
-      <div class="pimg">${b ? `<span class="badge">-${b}%</span>` : ""}<a href="product.html?id=${p.id}"><img loading="lazy" src="${p.image}" alt="${esc(p.name)}"></a>
+      <div class="pimg">${b ? `<span class="badge">-${b}%</span>` : ""}<a href="product.html?id=${p.id}"><img src="${p.image}" alt="${esc(p.name)}"></a>
         <div class="pact"><button data-wishbtn="${p.id}" class="${wish().includes(p.id) ? "on" : ""}" title="Add to wishlist" aria-label="Add to wishlist">${ic("heart", 18)}</button><button data-cmpbtn="${p.id}" class="${cmp().includes(p.id) ? "on" : ""}" title="Add to compare" aria-label="Add to compare">${ic("compare", 18)}</button><button data-qv="${p.id}" title="Quick view" aria-label="Quick view">${ic("eye", 18)}</button></div></div>
       <div class="pbody"><a class="pcat" href="shop.html?cat=${p.category}">${esc(catName(p.category))}</a><h3><a href="product.html?id=${p.id}">${esc(p.name)}</a></h3>
-        <div class="price">${priceHTML(p)}</div><p class="pdesc">${esc(short(p.description))}</p>
+        <div class="price">${priceHTML(p)}</div>${p.variants && p.variants.length > 1 ? `<span class="ncol">${p.variants.length} colours</span>` : ""}<p class="pdesc">${esc(short(p.description))}</p>
         ${hasSize ? `<a class="btn btn-outline btn-sm" href="product.html?id=${p.id}">Select options</a>` : `<button class="btn btn-outline btn-sm" data-add="${p.id}">Add to cart</button>`}</div></article>`;
   }
   const grid = (list, cls = "") => `<div class="pgrid ${cls}">${list.map(card).join("")}</div>`;
   const sectionHead = (eyebrow, title, tag) => `<div class="section-head">${eyebrow ? `<span class="eyebrow">${eyebrow}</span>` : ""}<h2>${title}</h2>${tag ? `<p>${tag}</p>` : ""}</div>`;
-  const catTiles = () => `<div class="cat-grid">${liveCats().map(c => `<a class="cat-tile" href="shop.html?cat=${c.id}"><span class="ct-img"><img loading="lazy" src="${catImage(c.id)}" alt="${esc(c.name)}"></span><h3>${esc(c.name)}</h3><small>${inCat(c.id).length} products</small></a>`).join("")}${hasSale() ? `<a class="cat-tile" href="shop.html?sale=1"><span class="ct-img"><img loading="lazy" src="${(D.products.find(p => p.sale) || {}).image}" alt="Deals"></span><h3>Deals</h3><small>${D.products.filter(p => p.sale).length} products</small></a>` : ""}</div>`;
+  const catTiles = () => `<div class="cat-grid">${liveCats().map(c => `<a class="cat-tile" href="shop.html?cat=${c.id}"><span class="ct-img"><img src="${catImage(c.id)}" alt="${esc(c.name)}"></span><h3>${esc(c.name)}</h3><small>${inCat(c.id).length} products</small></a>`).join("")}${hasSale() ? `<a class="cat-tile" href="shop.html?sale=1"><span class="ct-img"><img src="${(D.products.find(p => p.sale) || {}).image}" alt="Deals"></span><h3>Deals</h3><small>${D.products.filter(p => p.sale).length} products</small></a>` : ""}</div>`;
   const titleBar = (title, crumbs) => `<div class="page-title"><div class="container"><h1>${title}</h1><div class="crumbs">${crumbs}</div></div></div>`;
   const wrap = h => { $("#app").innerHTML = h; };
 
@@ -202,7 +206,7 @@
           <span class="chip c1">Premium Footwear</span><span class="chip c2">Luxury Watches</span><span class="chip c3">Nationwide Delivery</span><b class="spark s1"></b><b class="spark s2"></b><b class="spark s3"></b><b class="spark s4"></b></div></div></div>
         <div class="slide"><div class="container hero-grid"><div class="copy"><span class="eyebrow">Style · Quality · Class</span><h1>The Mark of <span class="gold-text">a Leader</span></h1>
           <p>Loafers, sneakers, boots, slides and statement watches. Choose your pair, send your order on WhatsApp, and we deliver nationwide.</p><a class="btn btn-gold" href="shop.html">Shop Now</a></div>
-          <div class="hero-art collage" aria-hidden="true"><div class="glow"></div>${["akins-wheat-nubuck-boots", "akins-emerald-steel-automatic-watch", "akins-onyx-puff-loafers"].map((id, i) => `<figure class="cp cp${i + 1}"><img src="${heroImg(id)}" alt=""></figure>`).join("")}</div></div></div>
+          <div class="hero-art collage" aria-hidden="true"><div class="glow"></div>${["akins-wheat-nubuck-boots", "akins-perpetual-tourbillon-bracelet-watch", "akins-puff-loafers"].map((id, i) => `<figure class="cp cp${i + 1}"><img src="${heroImg(id)}" alt=""></figure>`).join("")}</div></div></div>
         <button class="sl-arrow prev" aria-label="Previous slide">${ic("left", 26)}</button><button class="sl-arrow next" aria-label="Next slide">${ic("right", 26)}</button><div class="sl-dots"><button class="on" aria-label="Slide 1"></button><button aria-label="Slide 2"></button></div></div></section>
       <section class="section"><div class="container">${sectionHead(esc(C.STORE_NAME.split(" ")[0]).toUpperCase() + " COLLECTIONS", "FEATURED CATEGORIES", "Distinctly Bold. Uniquely " + esc(C.STORE_NAME.split(" ")[0]) + ".")}${catTiles()}</div></section>
       <section class="section alt"><div class="container">${sectionHead("AKINS PRODUCTS", "FEATURED PRODUCTS", "Distinctly Bold. Uniquely Akins.")}${grid(feat)}</div></section>
@@ -224,7 +228,7 @@
     shop() {
       const cat = qs.get("cat") || "", q = (qs.get("q") || "").trim(), sale = qs.get("sale"), orderby = qs.get("orderby") || "menu_order";
       const per = [18, 24, 36].includes(+qs.get("per_page")) ? +qs.get("per_page") : C.PER_PAGE, perRow = [3, 4].includes(+qs.get("per_row")) ? +qs.get("per_row") : 4;
-      let list = D.products.filter(p => (!cat || p.category === cat) && (!sale || (p.sale && p.compareAt > p.price)) && (!q || (p.name + " " + p.description + " " + catName(p.category)).toLowerCase().includes(q.toLowerCase())));
+      let list = D.products.filter(p => (!cat || p.category === cat) && (!sale || (p.sale && p.compareAt > p.price)) && (!q || (p.name + " " + p.description + " " + catName(p.category) + " " + (p.variants || []).map(v => v.label).join(" ")).toLowerCase().includes(q.toLowerCase())));
       const order = { popularity: (a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0), rating: (a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0), date: (a, b) => D.products.indexOf(b) - D.products.indexOf(a), price: (a, b) => a.price - b.price, "price-desc": (a, b) => b.price - a.price };
       if (order[orderby]) list = list.slice().sort(order[orderby]);
       const total = list.length, pages_ = Math.max(1, Math.ceil(total / per)), pg = Math.min(Math.max(1, +qs.get("paged") || 1), pages_), from = (pg - 1) * per;
@@ -248,16 +252,16 @@
       const p = byId(qs.get("id")); if (!p) return wrap(titleBar("Product not found", `<a href="index.html">Home</a> / Shop`) + `<div class="container empty"><p>Sorry, we couldn’t find that product.</p><a class="btn btn-gold" href="shop.html">Back to shop</a></div>`);
       document.title = p.name + " — " + C.STORE_NAME;
       const same = inCat(p.category), idx = same.indexOf(p), prev = same[(idx - 1 + same.length) % same.length], next = same[(idx + 1) % same.length];
-      const sizes = p.sizes || [], related = same.filter(x => x !== p).concat(D.products.filter(x => x.category !== p.category && x !== p)).slice(0, 8);
+      const vs = p.variants || [], colorRow = vs.length > 1 ? `<div class="var-row"><label>Colour</label><div><div class="swatches" id="chips">${vs.map(v => `<button type="button" class="swatch" data-c="${esc(v.label)}" data-img="${v.image}" title="${esc(v.label)}"><img src="${v.image}" alt="${esc(v.label)}"></button>`).join("")}</div><p class="chosen" id="chosen">Choose a colour (${vs.length} available)</p></div></div>` : "", sizes = p.sizes || [], related = same.filter(x => x !== p).concat(D.products.filter(x => x.category !== p.category && x !== p)).slice(0, 8);
       const more = D.products.filter(x => x !== p).slice(-4).reverse(), url = encodeURIComponent(location.href), txt = encodeURIComponent(p.name + " — " + C.STORE_NAME);
       wrap(`<div class="container"><nav class="crumbs pcrumbs"><a href="index.html">Home</a> / <a href="shop.html?cat=${p.category}">${esc(catName(p.category))}</a> / <span>${esc(p.name)}</span></nav>
       <div class="pd"><div class="pd-gallery"><div class="pd-nav">${same.length > 1 ? `<a href="product.html?id=${prev.id}" class="pn" title="${esc(prev.name)}">${ic("left", 16)}<img src="${prev.image}" alt=""></a><a href="product.html?id=${next.id}" class="pn" title="${esc(next.name)}"><img src="${next.image}" alt="">${ic("right", 16)}</a>` : ""}</div>
         <div class="pd-main">${pct(p) ? `<span class="badge">-${pct(p)}%</span>` : ""}<img id="mainimg" src="${p.image}" alt="${esc(p.name)}"><button class="enlarge" id="enlarge">${ic("search", 16)} Click to enlarge</button></div></div>
         <div class="pd-info"><h1>${esc(p.name)}</h1><div class="price lg">${priceHTML(p)}</div><p class="pd-short">${esc(p.description)}</p>
-          <form id="pform" class="pform">${sizes.length ? `<div class="var-row"><label for="size">Shoe Size</label><div class="sel"><select id="size" name="size"><option value="">Choose an option</option>${sizes.map(s => `<option>${s}</option>`).join("")}</select><a href="#" class="clear" id="clearsz" hidden>Clear</a></div></div>` : ""}
+          <form id="pform" class="pform">${colorRow}${sizes.length ? `<div class="var-row"><label for="size">Shoe Size</label><div class="sel"><select id="size" name="size"><option value="">Choose an option</option>${sizes.map(s => `<option>${s}</option>`).join("")}</select><a href="#" class="clear" id="clearsz" hidden>Clear</a></div></div>` : ""}
             <div class="buy-row"><div class="qty"><button type="button" data-q="-1" aria-label="Decrease">${ic("minus", 16)}</button><input type="number" id="qty" value="1" min="1" max="99" aria-label="${esc(p.name)} quantity"><button type="button" data-q="1" aria-label="Increase">${ic("plus", 16)}</button></div><button class="btn btn-gold add-big">Add to cart</button></div></form>
           <div class="pd-links"><button data-cmpbtn="${p.id}" class="lnk">${ic("compare", 16)} Add to compare</button><button data-wishbtn="${p.id}" class="lnk">${ic("heart", 16)} Add to wishlist</button></div>
-          <ul class="meta"><li><b>SKU:</b> ${esc(p.sku || "")}</li><li><b>Category:</b> <a href="shop.html?cat=${p.category}">${esc(catName(p.category))}</a></li></ul>
+          <ul class="meta"><li><b>SKU:</b> ${esc(p.sku || "")}</li>${vs.length > 1 ? `<li><b>Colours:</b> ${vs.map(v => esc(v.label)).join(", ")}</li>` : ""}<li><b>Category:</b> <a href="shop.html?cat=${p.category}">${esc(catName(p.category))}</a></li></ul>
           <div class="vendor"><img src="${C.LOGO}" alt=""><div><small>Sold by</small><b>${esc(C.STORE_NAME)}</b></div><a class="btn btn-outline btn-sm" href="https://wa.me/${C.WHATSAPP}?text=${encodeURIComponent("Hello, I have a question about: " + p.name)}" target="_blank" rel="noopener">${ic("whatsapp", 16)} Ask on WhatsApp</a></div>
           <div class="share"><b>Share:</b><a target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=${url}" aria-label="Facebook">${ic("facebook", 16)}</a><a target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=${url}&text=${txt}" aria-label="X">${ic("twitter", 16)}</a><a target="_blank" rel="noopener" href="https://pinterest.com/pin/create/button/?url=${url}&description=${txt}" aria-label="Pinterest">${ic("pinterest", 16)}</a><a target="_blank" rel="noopener" href="https://www.linkedin.com/sharing/share-offsite/?url=${url}" aria-label="LinkedIn">${ic("linkedin", 16)}</a><a target="_blank" rel="noopener" href="https://t.me/share/url?url=${url}&text=${txt}" aria-label="Telegram">${ic("telegram", 16)}</a><a target="_blank" rel="noopener" href="https://wa.me/?text=${txt}%20${url}" aria-label="WhatsApp">${ic("whatsapp", 16)}</a></div></div></div>
       <div class="tabs"><div class="tab-bar" role="tablist"><button class="on" data-tab="t1">Description</button><button data-tab="t2">Additional information</button><button data-tab="t3">Reviews (0)</button><button data-tab="t4">Store Info</button><button data-tab="t5">More Products</button></div>
@@ -271,8 +275,9 @@
       const sel = $("#size"), clr = $("#clearsz");
       if (sel) { sel.onchange = () => clr.hidden = !sel.value; clr.onclick = e => { e.preventDefault(); sel.value = ""; clr.hidden = true; }; }
       $$("[data-q]").forEach(b => b.onclick = () => { const i = $("#qty"); i.value = Math.max(1, Math.min(99, (+i.value || 1) + +b.dataset.q)); });
-      $("#pform").onsubmit = e => { e.preventDefault(); addToCart(p.id, sel ? sel.value : "", Math.max(1, +$("#qty").value || 1)); };
-      $("#enlarge").onclick = () => lightbox(p.image, p.name); $("#mainimg").onclick = () => lightbox(p.image, p.name);
+      $("#pform").onsubmit = e => { e.preventDefault(); addToCart(p.id, sel ? sel.value : "", Math.max(1, +$("#qty").value || 1), false, color); };
+      let color = ""; $$(".swatch").forEach(b => b.onclick = () => { color = b.dataset.c; $$(".swatch").forEach(x => x.classList.toggle("on", x === b)); $("#mainimg").src = b.dataset.img; $("#chosen").textContent = "Colour: " + color; });
+      $("#enlarge").onclick = () => lightbox($("#mainimg").src, p.name); $("#mainimg").onclick = () => lightbox($("#mainimg").src, p.name);
       $$(".tab-bar button").forEach(b => b.onclick = () => { $$(".tab-bar button,.tab").forEach(x => x.classList.remove("on")); b.classList.add("on"); $("#" + b.dataset.tab).classList.add("on"); });
       let stars = 0; $$("#stars button").forEach(b => b.onclick = () => { stars = +b.dataset.s; $$("#stars button").forEach(x => x.classList.toggle("on", +x.dataset.s <= stars)); });
       $("#rform").onsubmit = e => { e.preventDefault(); const f = new FormData(e.target); const m = `New review for ${p.name}:%0ARating: ${stars || "-"}/5%0A${encodeURIComponent(f.get("review"))}%0A— ${encodeURIComponent(f.get("name"))}`; window.open(`https://wa.me/${C.WHATSAPP}?text=${m}`, "_blank"); toast("Opening WhatsApp…"); };
@@ -282,12 +287,12 @@
       const t = totals();
       if (!t.lines.length) return wrap(`${titleBar("Cart", `<a href="index.html">Home</a> / <span>Cart</span>`)}<div class="container"><div class="empty big"><h2>Your cart is currently empty!</h2><a class="btn btn-gold" href="shop.html">Return to shop</a></div><section class="related">${sectionHead("", "New in store", "")}${grid(D.products.slice(-4).reverse(), "per4")}</section></div>`);
       wrap(`${titleBar("Cart", `<a href="index.html">Home</a> / <span>Cart</span>`)}<div class="container cart-layout"><div class="cart-main">
-        <table class="ctable"><thead><tr><th class="c-rm"></th><th class="c-img"></th><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th></tr></thead><tbody>${t.lines.map(l => `<tr data-k="${esc(key(l.id, l.size))}"><td class="c-rm"><button data-rm="${esc(key(l.id, l.size))}" aria-label="Remove ${esc(l.p.name)}">${ic("x", 18)}</button></td><td class="c-img"><a href="product.html?id=${l.p.id}"><img src="${l.p.image}" alt=""></a></td>
-          <td data-l="Product"><a href="product.html?id=${l.p.id}">${esc(l.p.name)}</a>${l.size ? `<small class="vmeta">Shoe Size: ${esc(l.size)}</small>` : ""}</td><td data-l="Price">${fmt(l.p.price)}</td>
-          <td data-l="Quantity"><div class="qty sm"><button data-cq="-1" data-k="${esc(key(l.id, l.size))}" aria-label="Decrease">${ic("minus", 14)}</button><input type="number" value="${l.qty}" min="1" max="99" data-k="${esc(key(l.id, l.size))}" class="cq"><button data-cq="1" data-k="${esc(key(l.id, l.size))}" aria-label="Increase">${ic("plus", 14)}</button></div></td><td data-l="Subtotal">${fmt(l.total)}</td></tr>`).join("")}</tbody></table>
+        <table class="ctable"><thead><tr><th class="c-rm"></th><th class="c-img"></th><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th></tr></thead><tbody>${t.lines.map(l => `<tr data-k="${esc(key(l.id, l.size, l.color))}"><td class="c-rm"><button data-rm="${esc(key(l.id, l.size, l.color))}" aria-label="Remove ${esc(l.p.name)}">${ic("x", 18)}</button></td><td class="c-img"><a href="product.html?id=${l.p.id}"><img src="${imgFor(l.p, l.color)}" alt=""></a></td>
+          <td data-l="Product"><a href="product.html?id=${l.p.id}">${esc(l.p.name)}</a>${opt(l) ? `<small class="vmeta">${esc(opt(l))}</small>` : ""}</td><td data-l="Price">${fmt(l.p.price)}</td>
+          <td data-l="Quantity"><div class="qty sm"><button data-cq="-1" data-k="${esc(key(l.id, l.size, l.color))}" aria-label="Decrease">${ic("minus", 14)}</button><input type="number" value="${l.qty}" min="1" max="99" data-k="${esc(key(l.id, l.size, l.color))}" class="cq"><button data-cq="1" data-k="${esc(key(l.id, l.size, l.color))}" aria-label="Increase">${ic("plus", 14)}</button></div></td><td data-l="Subtotal">${fmt(l.total)}</td></tr>`).join("")}</tbody></table>
         <div class="coupon-row"><form id="cform" class="coupon"><input id="ccode" placeholder="Coupon code" value="${esc(t.code)}" aria-label="Coupon code"><button class="btn btn-outline">Apply coupon</button></form><button class="btn btn-outline" id="clearcart">Clear cart</button></div></div>
         <aside class="totals"><h3>Cart totals</h3><table><tr><th>Subtotal</th><td>${fmt(t.sub)}</td></tr>${t.disc ? `<tr><th>Coupon: ${esc(t.code)}</th><td>−${fmt(t.disc)}</td></tr>` : ""}<tr><th>Shipping</th><td>${t.ship ? `Flat rate: ${fmt(t.ship)}` : "Free shipping"}</td></tr><tr class="grand"><th>Total</th><td>${fmt(t.total)}</td></tr></table><a class="btn btn-gold btn-block" href="checkout.html">Proceed to checkout</a></aside></div>`);
-      $$("[data-cq]").forEach(b => b.onclick = () => setQty(b.dataset.k, (cart().find(i => key(i.id, i.size) === b.dataset.k) || { qty: 1 }).qty + +b.dataset.cq));
+      $$("[data-cq]").forEach(b => b.onclick = () => setQty(b.dataset.k, (cart().find(i => key(i.id, i.size, i.color) === b.dataset.k) || { qty: 1 }).qty + +b.dataset.cq));
       $$(".cq").forEach(i => i.onchange = () => setQty(i.dataset.k, +i.value || 1));
       $("#clearcart").onclick = () => { save("akins_cart", []); pages.cart(); refresh(); };
       $("#cform").onsubmit = e => { e.preventDefault(); const v = $("#ccode").value.trim().toUpperCase(); if (!v) { save("akins_coupon", ""); } else if (C.COUPONS && C.COUPONS[v]) { save("akins_coupon", v); toast("Coupon code applied successfully."); } else { save("akins_coupon", ""); toast(`Coupon “${v}” does not exist!`); } pages.cart(); refresh(); };
@@ -303,7 +308,7 @@
           <label>Town / City *<input name="city" required value="${esc(u.city || "")}"></label><label>Street address *<input name="address" required autocomplete="street-address" value="${esc(u.address || "")}" placeholder="House number and street name"></label>
           <label>Order notes (optional)<textarea name="notes" rows="3" placeholder="Notes about your order, e.g. special delivery instructions"></textarea></label></div>
         <div class="co-order"><div class="scallop"></div><div class="order-box"><h3>YOUR ORDER</h3>
-          <table class="rev"><thead><tr><th>PRODUCT</th><th>SUBTOTAL</th></tr></thead><tbody>${t.lines.map(l => `<tr><td>${esc(l.p.name)}${l.size ? ` - ${esc(l.size)}` : ""} <strong>× ${l.qty}</strong><div class="vend">Sold by: ${esc(C.STORE_NAME)}</div></td><td>${fmt(l.total)}</td></tr>`).join("")}</tbody>
+          <table class="rev"><thead><tr><th>PRODUCT</th><th>SUBTOTAL</th></tr></thead><tbody>${t.lines.map(l => `<tr><td>${esc(l.p.name)}${opt(l) ? ` - ${esc(opt(l))}` : ""} <strong>× ${l.qty}</strong><div class="vend">Sold by: ${esc(C.STORE_NAME)}</div></td><td>${fmt(l.total)}</td></tr>`).join("")}</tbody>
           <tfoot><tr><th>Subtotal</th><td class="red">${fmt(t.sub)}</td></tr>${t.disc ? `<tr><th>Coupon: ${esc(t.code)}</th><td class="red">−${fmt(t.disc)}</td></tr>` : ""}<tr><th>Shipping</th><td>${t.ship ? `Flat rate: <span class="red">${fmt(t.ship)}</span>` : `<span class="red">Free shipping</span>`}</td></tr><tr class="grand"><th>Total</th><td class="red">${fmt(t.total)}</td></tr></tfoot></table>
           <div class="pay"><label class="radio"><input type="radio" checked name="pm"> Pay by Bank Transfer (via WhatsApp)</label><div class="pay-desc">After you place your order, a PDF of your order is downloaded and WhatsApp opens with your order typed in. We reply with our account details; transfer the total and send your receipt in the same chat.</div></div>
           <p class="privacy">Your personal data will be used to process your order and arrange delivery.</p><p class="form-err" id="co-err"></p><button class="btn btn-gold btn-block" id="place">Place order</button></div></div></form></div>`);
@@ -314,7 +319,7 @@
         if (!/^[+0-9\s-]{7,}$/.test(f.elements.phone.value.trim())) { f.elements.phone.focus(); err.textContent = "Please enter a valid phone number."; return; }
         const d = Object.fromEntries(new FormData(f)), tt = totals();
         const o = { reference: "AKN-" + Date.now().toString(36).toUpperCase(), date: Date.now(), customer: { name: (d.first + " " + d.last).trim(), phone: d.phone, email: d.email, address: d.address, city: d.city, state: d.state, notes: d.notes },
-          lines: tt.lines.map(l => ({ id: l.id, name: l.p.name, size: l.size, qty: l.qty, unit_price: l.p.price })), subtotal: tt.sub, discount: tt.disc, coupon: tt.code, shipping: tt.ship, total: tt.total };
+          lines: tt.lines.map(l => ({ id: l.id, name: l.p.name, size: l.size, color: l.color, qty: l.qty, unit_price: l.p.price })), subtotal: tt.sub, discount: tt.disc, coupon: tt.code, shipping: tt.ship, total: tt.total };
         const orders = load("akins_orders", []); orders.unshift(o); save("akins_orders", orders.slice(0, 50)); save("akins_last_order", o);
         const usr = me(); if (usr && !usr.address) { const all = users(); const x = all.find(y => y.id === usr.id); Object.assign(x, { address: d.address, city: d.city, state: d.state, phone: x.phone || d.phone }); save("akins_users", all); }
         save("akins_cart", []); save("akins_coupon", ""); try { sessionStorage.setItem("akins_wa_pending", "1"); } catch (x) {}
@@ -329,7 +334,7 @@
       wrap(`${titleBar("Order received", `<a href="index.html">Home</a> / <span>Order received</span>`)}<div class="container narrow-c"><p class="thanks">Thank you. Your order has been received.</p>
         <ul class="ov"><li>Order number:<b>${esc(o.reference)}</b></li><li>Date:<b>${new Date(o.date).toLocaleDateString("en-GB", { day: "2-digit", month: "long", year: "numeric" })}</b></li><li>Total:<b>${fmt(o.total)}</b></li><li>Payment method:<b>Bank Transfer (via WhatsApp)</b></li></ul>
         <div class="nextbox"><h3>Final step: send your order on WhatsApp</h3><p>Your order summary PDF has been downloaded. Tap the button, attach the PDF, and send. We’ll reply with our account details.</p><div class="btn-row"><a class="btn btn-gold" id="wa" target="_blank" rel="noopener" href="#">${ic("whatsapp", 18)} Send order on WhatsApp</a><button class="btn btn-outline" id="dl">Download PDF again</button></div></div>
-        <h3>Order details</h3><table class="rev det"><thead><tr><th>Product</th><th>Total</th></tr></thead><tbody>${o.lines.map(l => `<tr><td>${esc(l.name)}${l.size ? ` - ${esc(l.size)}` : ""} <strong>× ${l.qty}</strong></td><td>${fmt(l.unit_price * l.qty)}</td></tr>`).join("")}</tbody><tfoot><tr><th>Subtotal</th><td>${fmt(o.subtotal)}</td></tr>${o.discount ? `<tr><th>Discount</th><td>−${fmt(o.discount)}</td></tr>` : ""}<tr><th>Shipping</th><td>${o.shipping ? fmt(o.shipping) : "Free shipping"}</td></tr><tr class="grand"><th>Total</th><td>${fmt(o.total)}</td></tr></tfoot></table>
+        <h3>Order details</h3><table class="rev det"><thead><tr><th>Product</th><th>Total</th></tr></thead><tbody>${o.lines.map(l => `<tr><td>${esc(l.name)}${opt(l) ? ` - ${esc(opt(l))}` : ""} <strong>× ${l.qty}</strong></td><td>${fmt(l.unit_price * l.qty)}</td></tr>`).join("")}</tbody><tfoot><tr><th>Subtotal</th><td>${fmt(o.subtotal)}</td></tr>${o.discount ? `<tr><th>Discount</th><td>−${fmt(o.discount)}</td></tr>` : ""}<tr><th>Shipping</th><td>${o.shipping ? fmt(o.shipping) : "Free shipping"}</td></tr><tr class="grand"><th>Total</th><td>${fmt(o.total)}</td></tr></tfoot></table>
         <h3>Billing address</h3><address>${esc(c.name)}<br>${esc(c.address)}<br>${esc(c.city)}, ${esc(c.state)}<br>${esc(c.phone)}${c.email ? "<br>" + esc(c.email) : ""}</address></div>`);
       $("#wa").href = waLink(o); $("#dl").onclick = () => AkinsPDF.download(pdfData(o), `Akins-Order-${o.reference}.pdf`);
       let pend = false; try { pend = sessionStorage.getItem("akins_wa_pending"); sessionStorage.removeItem("akins_wa_pending"); } catch (e) {}
@@ -338,13 +343,13 @@
 
     wishlist() {
       const list = wish().map(byId).filter(Boolean);
-      wrap(`${titleBar("Wishlist", `<a href="index.html">Home</a> / <span>Wishlist</span>`)}<div class="container">${list.length ? `<table class="ctable wl"><thead><tr><th class="c-rm"></th><th class="c-img"></th><th>Product</th><th>Price</th><th>Stock</th><th></th></tr></thead><tbody>${list.map(p => `<tr><td class="c-rm"><button data-wishbtn="${p.id}" data-reload aria-label="Remove">${ic("x", 18)}</button></td><td class="c-img"><a href="product.html?id=${p.id}"><img src="${p.image}" alt=""></a></td><td data-l="Product"><a href="product.html?id=${p.id}">${esc(p.name)}</a></td><td data-l="Price"><span class="price">${priceHTML(p)}</span></td><td data-l="Stock" class="ok">In stock</td><td>${p.sizes && p.sizes.length ? `<a class="btn btn-outline btn-sm" href="product.html?id=${p.id}">Select options</a>` : `<button class="btn btn-gold btn-sm" data-add="${p.id}">Add to cart</button>`}</td></tr>`).join("")}</tbody></table>` : `<div class="empty big"><h2>Your wishlist is empty</h2><p>Tap the heart on any product to save it here.</p><a class="btn btn-gold" href="shop.html">Return to shop</a></div>`}</div>`);
+      wrap(`${titleBar("Wishlist", `<a href="index.html">Home</a> / <span>Wishlist</span>`)}<div class="container">${list.length ? `<table class="ctable wl"><thead><tr><th class="c-rm"></th><th class="c-img"></th><th>Product</th><th>Price</th><th>Stock</th><th></th></tr></thead><tbody>${list.map(p => `<tr><td class="c-rm"><button data-wishbtn="${p.id}" data-reload aria-label="Remove">${ic("x", 18)}</button></td><td class="c-img"><a href="product.html?id=${p.id}"><img src="${p.image}" alt=""></a></td><td data-l="Product"><a href="product.html?id=${p.id}">${esc(p.name)}</a></td><td data-l="Price"><span class="price">${priceHTML(p)}</span></td><td data-l="Stock" class="ok">In stock</td><td>${hasOpts(p) ? `<a class="btn btn-outline btn-sm" href="product.html?id=${p.id}">Select options</a>` : `<button class="btn btn-gold btn-sm" data-add="${p.id}">Add to cart</button>`}</td></tr>`).join("")}</tbody></table>` : `<div class="empty big"><h2>Your wishlist is empty</h2><p>Tap the heart on any product to save it here.</p><a class="btn btn-gold" href="shop.html">Return to shop</a></div>`}</div>`);
     },
 
     compare() {
       const list = cmp().map(byId).filter(Boolean);
       const row = (label, fn) => `<tr><th>${label}</th>${list.map(p => `<td>${fn(p)}</td>`).join("")}</tr>`;
-      wrap(`${titleBar("Compare", `<a href="index.html">Home</a> / <span>Compare</span>`)}<div class="container">${list.length ? `<div class="cmp-wrap"><table class="cmp">${row("", p => `<button class="cmp-x" data-cmpbtn="${p.id}" aria-label="Remove">${ic("x", 16)}</button><a href="product.html?id=${p.id}"><img src="${p.image}" alt=""></a>`)}${row("Product", p => `<a href="product.html?id=${p.id}"><b>${esc(p.name)}</b></a>`)}${row("Price", p => `<span class="price">${priceHTML(p)}</span>`)}${row("Category", p => esc(catName(p.category)))}${row("Sizes", p => p.sizes && p.sizes.length ? p.sizes.join(", ") : "—")}${row("Description", p => esc(p.description))}${row("SKU", p => esc(p.sku || ""))}${row("", p => p.sizes && p.sizes.length ? `<a class="btn btn-outline btn-sm" href="product.html?id=${p.id}">Select options</a>` : `<button class="btn btn-gold btn-sm" data-add="${p.id}">Add to cart</button>`)}</table></div>` : `<div class="empty big"><h2>No products to compare</h2><p>Use the compare icon on up to 4 products.</p><a class="btn btn-gold" href="shop.html">Return to shop</a></div>`}</div>`);
+      wrap(`${titleBar("Compare", `<a href="index.html">Home</a> / <span>Compare</span>`)}<div class="container">${list.length ? `<div class="cmp-wrap"><table class="cmp">${row("", p => `<button class="cmp-x" data-cmpbtn="${p.id}" aria-label="Remove">${ic("x", 16)}</button><a href="product.html?id=${p.id}"><img src="${p.image}" alt=""></a>`)}${row("Product", p => `<a href="product.html?id=${p.id}"><b>${esc(p.name)}</b></a>`)}${row("Price", p => `<span class="price">${priceHTML(p)}</span>`)}${row("Category", p => esc(catName(p.category)))}${row("Sizes", p => p.sizes && p.sizes.length ? p.sizes.join(", ") : "—")}${row("Description", p => esc(p.description))}${row("SKU", p => esc(p.sku || ""))}${row("", p => hasOpts(p) ? `<a class="btn btn-outline btn-sm" href="product.html?id=${p.id}">Select options</a>` : `<button class="btn btn-gold btn-sm" data-add="${p.id}">Add to cart</button>`)}</table></div>` : `<div class="empty big"><h2>No products to compare</h2><p>Use the compare icon on up to 4 products.</p><a class="btn btn-gold" href="shop.html">Return to shop</a></div>`}</div>`);
     },
 
     about() {
@@ -396,28 +401,29 @@
     }
   };
 
-  function setQty(k, q) { const c = cart(), it = c.find(i => key(i.id, i.size) === k); if (!it) return; it.qty = Math.max(1, Math.min(99, q)); save("akins_cart", c); if (page === "cart") pages.cart(); refresh(); }
-  function removeLine(k) { save("akins_cart", cart().filter(i => key(i.id, i.size) !== k)); if (page === "cart") pages.cart(); refresh(); }
+  function setQty(k, q) { const c = cart(), it = c.find(i => key(i.id, i.size, i.color) === k); if (!it) return; it.qty = Math.max(1, Math.min(99, q)); save("akins_cart", c); if (page === "cart") pages.cart(); refresh(); }
+  function removeLine(k) { save("akins_cart", cart().filter(i => key(i.id, i.size, i.color) !== k)); if (page === "cart") pages.cart(); refresh(); }
 
   function lightbox(src, alt) { const l = document.createElement("div"); l.className = "lightbox"; l.innerHTML = `<img src="${src}" alt="${esc(alt)}"><button aria-label="Close">${ic("x", 26)}</button>`; l.onclick = () => l.remove(); document.body.appendChild(l); }
   function quickView(id) {
     const p = byId(id); if (!p) return; const sizes = p.sizes || [];
     $("#qv-body").innerHTML = `<div class="qv"><div class="qv-img"><img src="${p.image}" alt="${esc(p.name)}"></div><div class="qv-info"><a class="pcat" href="shop.html?cat=${p.category}">${esc(catName(p.category))}</a><h2>${esc(p.name)}</h2><div class="price lg">${priceHTML(p)}</div><p>${esc(p.description)}</p>
-      <form id="qvf">${sizes.length ? `<div class="var-row"><label>Shoe Size</label><div class="sel"><select name="size"><option value="">Choose an option</option>${sizes.map(s => `<option>${s}</option>`).join("")}</select></div></div>` : ""}<div class="buy-row"><div class="qty"><button type="button" data-qq="-1">${ic("minus", 16)}</button><input type="number" name="qty" value="1" min="1" max="99"><button type="button" data-qq="1">${ic("plus", 16)}</button></div><button class="btn btn-gold">Add to cart</button></div></form>
+      <form id="qvf">${(p.variants || []).length > 1 ? `<div class="var-row"><label>Colour</label><div class="sel"><select name="color"><option value="">Choose an option</option>${p.variants.map(v => `<option>${esc(v.label)}</option>`).join("")}</select></div></div>` : ""}${sizes.length ? `<div class="var-row"><label>Shoe Size</label><div class="sel"><select name="size"><option value="">Choose an option</option>${sizes.map(s => `<option>${s}</option>`).join("")}</select></div></div>` : ""}<div class="buy-row"><div class="qty"><button type="button" data-qq="-1">${ic("minus", 16)}</button><input type="number" name="qty" value="1" min="1" max="99"><button type="button" data-qq="1">${ic("plus", 16)}</button></div><button class="btn btn-gold">Add to cart</button></div></form>
       <a class="lnk" href="product.html?id=${p.id}">View full details →</a></div></div>`;
     $$("[data-qq]").forEach(b => b.onclick = () => { const i = $("#qvf [name=qty]"); i.value = Math.max(1, (+i.value || 1) + +b.dataset.qq); });
-    $("#qvf").onsubmit = e => { e.preventDefault(); const f = e.target; if (addToCart(p.id, f.elements.size ? f.elements.size.value : "", +f.elements.qty.value || 1)) { /* mini cart opens */ } };
+    $("#qvf").onsubmit = e => { e.preventDefault(); const f = e.target; if (addToCart(p.id, f.elements.size ? f.elements.size.value : "", +f.elements.qty.value || 1, false, f.elements.color ? f.elements.color.value : "")) { /* mini cart opens */ } };
+    const cs = $("#qvf [name=color]"); if (cs) cs.onchange = () => { const v = p.variants.find(x => x.label === cs.value); if (v) $(".qv-img img").src = v.image; };
     openD("qv");
   }
 
   /* ---------- order summary helpers (PDF + WhatsApp) ---------- */
   const money = n => "₦" + Number(n).toLocaleString("en-NG");
   function waLink(o) {
-    const c = o.customer, L = o.lines.map((l, i) => `${i + 1}. ${l.name}${l.size ? " (Size " + l.size + ")" : ""} x${l.qty} - ${money(l.unit_price * l.qty)}`).join("\n");
+    const c = o.customer, L = o.lines.map((l, i) => `${i + 1}. ${l.name}${opt(l) ? " (" + opt(l) + ")" : ""} x${l.qty} - ${money(l.unit_price * l.qty)}`).join("\n");
     const t = `Hello ${C.STORE_NAME}, I'd like to place an order.\n\nOrder: ${o.reference}\n${L}\n\nSubtotal: ${money(o.subtotal)}${o.discount ? "\nDiscount: -" + money(o.discount) : ""}\nDelivery: ${o.shipping ? money(o.shipping) : "Free"}\nTOTAL: ${money(o.total)}\n\nName: ${c.name}\nPhone: ${c.phone}\nAddress: ${c.address}, ${c.city}, ${c.state}${c.notes ? "\nNote: " + c.notes : ""}\n\nPlease send your account details for payment. (Order summary PDF attached)`;
     return `https://wa.me/${C.WHATSAPP}?text=${encodeURIComponent(t)}`;
   }
-  const pdfData = o => ({ store: C.STORE_NAME, phone: C.PHONE, address: C.ADDRESS, email: C.EMAIL, reference: o.reference, date: new Date(o.date).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }), customer: o.customer, lines: o.lines, subtotal: o.subtotal, shipping: o.shipping, total: o.total, freeOver: C.FREE_SHIPPING_OVER, logoW: 256, logoH: 256 });
+  const pdfData = o => ({ store: C.STORE_NAME, phone: C.PHONE, address: C.ADDRESS, email: C.EMAIL, reference: o.reference, date: new Date(o.date).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }), customer: o.customer, lines: o.lines.map(l => ({ ...l, name: l.name + (l.color ? " - " + l.color : "") })), subtotal: o.subtotal, shipping: o.shipping, total: o.total, freeOver: C.FREE_SHIPPING_OVER, logoW: 256, logoH: 256 });
 
   /* ---------- boot ---------- */
   document.addEventListener("DOMContentLoaded", () => {

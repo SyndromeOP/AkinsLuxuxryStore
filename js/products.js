@@ -1,4 +1,5 @@
 // Product catalogue — edit this file to add/change/remove products (see README.md).
+// Each product has "variants" (colours): {label, image}. The first one is the cover photo.
 window.AKINS_DATA = {
  "categories": [
   {
@@ -38,6 +39,12 @@ window.AKINS_DATA = {
    "price": 190000,
    "compareAt": null,
    "image": "images/products/akins-wheat-nubuck-boots.jpg",
+   "variants": [
+    {
+     "label": "Wheat",
+     "image": "images/products/akins-wheat-nubuck-boots.jpg"
+    }
+   ],
    "description": "Classic six-inch wheat nubuck boots with padded collar, durable lugged sole and signature lacing.",
    "sizes": [
     39,
@@ -54,13 +61,23 @@ window.AKINS_DATA = {
    "sku": "AKN001"
   },
   {
-   "id": "akins-onyx-puff-loafers",
-   "name": "Akins Onyx Puff Loafers",
+   "id": "akins-puff-loafers",
+   "name": "Akins Puff Loafers",
    "category": "loafers",
    "price": 140000,
    "compareAt": null,
-   "image": "images/products/akins-onyx-puff-loafers.jpg",
-   "description": "Soft black leather loafers with a padded puff strap and chunky sole.",
+   "image": "images/products/akins-puff-loafers-onyx.jpg",
+   "variants": [
+    {
+     "label": "Onyx",
+     "image": "images/products/akins-puff-loafers-onyx.jpg"
+    },
+    {
+     "label": "Chocolate",
+     "image": "images/products/akins-puff-loafers-chocolate.jpg"
+    }
+   ],
+   "description": "Soft leather loafers with a padded puff strap and chunky sole.",
    "sizes": [
     39,
     40,
@@ -76,35 +93,23 @@ window.AKINS_DATA = {
    "sku": "AKN002"
   },
   {
-   "id": "akins-chocolate-puff-loafers",
-   "name": "Akins Chocolate Puff Loafers",
-   "category": "loafers",
-   "price": 140000,
-   "compareAt": null,
-   "image": "images/products/akins-chocolate-puff-loafers.jpg",
-   "description": "Rich chocolate leather loafers with a padded puff strap and chunky sole.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN003"
-  },
-  {
-   "id": "akins-cocoa-suede-loafers",
-   "name": "Akins Cocoa Suede Loafers",
+   "id": "akins-suede-loafers",
+   "name": "Akins Suede Loafers",
    "category": "loafers",
    "price": 160000,
    "compareAt": null,
-   "image": "images/products/akins-cocoa-suede-loafers.jpg",
-   "description": "Cocoa suede slip-on loafers with a cream gum sole. Relaxed luxury.",
+   "image": "images/products/akins-suede-loafers-cocoa.jpg",
+   "variants": [
+    {
+     "label": "Cocoa",
+     "image": "images/products/akins-suede-loafers-cocoa.jpg"
+    },
+    {
+     "label": "Navy",
+     "image": "images/products/akins-suede-loafers-navy.jpg"
+    }
+   ],
+   "description": "Suede slip-on loafers with a cream gum sole. Relaxed luxury.",
    "sizes": [
     39,
     40,
@@ -117,16 +122,30 @@ window.AKINS_DATA = {
    ],
    "featured": true,
    "sale": false,
-   "sku": "AKN004"
+   "sku": "AKN003"
   },
   {
-   "id": "akins-navy-suede-loafers",
-   "name": "Akins Navy Suede Loafers",
-   "category": "loafers",
-   "price": 160000,
+   "id": "akins-buckle-suede-clogs",
+   "name": "Akins Buckle Suede Clogs",
+   "category": "half-shoes",
+   "price": 130000,
    "compareAt": null,
-   "image": "images/products/akins-navy-suede-loafers.jpg",
-   "description": "Deep navy suede slip-on loafers with a cream gum sole.",
+   "image": "images/products/akins-buckle-suede-clogs-slate.jpg",
+   "variants": [
+    {
+     "label": "Slate",
+     "image": "images/products/akins-buckle-suede-clogs-slate.jpg"
+    },
+    {
+     "label": "Tan",
+     "image": "images/products/akins-buckle-suede-clogs-tan.jpg"
+    },
+    {
+     "label": "Noir",
+     "image": "images/products/akins-buckle-suede-clogs-noir.jpg"
+    }
+   ],
+   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
    "sizes": [
     39,
     40,
@@ -139,15 +158,57 @@ window.AKINS_DATA = {
    ],
    "featured": false,
    "sale": false,
-   "sku": "AKN005"
+   "sku": "AKN004"
   },
   {
-   "id": "akins-noir-cork-footbed-clogs",
-   "name": "Akins Noir Cork Footbed Clogs",
+   "id": "akins-triangle-emblem-mules",
+   "name": "Akins Triangle Emblem Mules",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
-   "image": "images/products/akins-noir-cork-footbed-clogs.jpg",
+   "image": "images/products/akins-triangle-emblem-mules-mocha-sand-noir.jpg",
+   "variants": [
+    {
+     "label": "Mocha, Sand & Noir",
+     "image": "images/products/akins-triangle-emblem-mules-mocha-sand-noir.jpg"
+    },
+    {
+     "label": "Noir Leather",
+     "image": "images/products/akins-triangle-emblem-mules-noir-leather.jpg"
+    }
+   ],
+   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
+   "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "featured": true,
+   "sale": false,
+   "sku": "AKN005"
+  },
+  {
+   "id": "akins-leather-closed-mules",
+   "name": "Akins Leather Closed Mules",
+   "category": "half-shoes",
+   "price": 130000,
+   "compareAt": null,
+   "image": "images/products/akins-leather-closed-mules-noir-ivory.jpg",
+   "variants": [
+    {
+     "label": "Noir & Ivory",
+     "image": "images/products/akins-leather-closed-mules-noir-ivory.jpg"
+    },
+    {
+     "label": "Noir, Ivory & Forest",
+     "image": "images/products/akins-leather-closed-mules-noir-ivory-forest.jpg"
+    }
+   ],
    "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
    "sizes": [
     39,
@@ -164,12 +225,18 @@ window.AKINS_DATA = {
    "sku": "AKN006"
   },
   {
-   "id": "akins-slate-buckle-suede-clogs",
-   "name": "Akins Slate Buckle Suede Clogs",
+   "id": "akins-noir-cork-footbed-clogs",
+   "name": "Akins Noir Cork Footbed Clogs",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
-   "image": "images/products/akins-slate-buckle-suede-clogs.jpg",
+   "image": "images/products/akins-noir-cork-footbed-clogs.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-cork-footbed-clogs.jpg"
+    }
+   ],
    "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
    "sizes": [
     39,
@@ -186,12 +253,18 @@ window.AKINS_DATA = {
    "sku": "AKN007"
   },
   {
-   "id": "akins-trio-suede-clogs",
-   "name": "Akins Trio Suede Clogs",
+   "id": "akins-white-flame-clogs",
+   "name": "Akins White Flame Clogs",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
-   "image": "images/products/akins-trio-suede-clogs.jpg",
+   "image": "images/products/akins-white-flame-clogs.jpg",
+   "variants": [
+    {
+     "label": "White",
+     "image": "images/products/akins-white-flame-clogs.jpg"
+    }
+   ],
    "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
    "sizes": [
     39,
@@ -203,17 +276,23 @@ window.AKINS_DATA = {
     45,
     46
    ],
-   "featured": true,
+   "featured": false,
    "sale": false,
    "sku": "AKN008"
   },
   {
-   "id": "akins-white-flame-clogs",
-   "name": "Akins White Flame Clogs",
+   "id": "akins-noir-cross-emblem-mules",
+   "name": "Akins Noir Cross Emblem Mules",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
-   "image": "images/products/akins-white-flame-clogs.jpg",
+   "image": "images/products/akins-noir-cross-emblem-mules.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-cross-emblem-mules.jpg"
+    }
+   ],
    "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
    "sizes": [
     39,
@@ -230,12 +309,18 @@ window.AKINS_DATA = {
    "sku": "AKN009"
   },
   {
-   "id": "akins-noir-cross-emblem-mules",
-   "name": "Akins Noir Cross Emblem Mules",
+   "id": "akins-crimson-espadrille-mules",
+   "name": "Akins Crimson Espadrille Mules",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
-   "image": "images/products/akins-noir-cross-emblem-mules.jpg",
+   "image": "images/products/akins-crimson-espadrille-mules.jpg",
+   "variants": [
+    {
+     "label": "Crimson",
+     "image": "images/products/akins-crimson-espadrille-mules.jpg"
+    }
+   ],
    "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
    "sizes": [
     39,
@@ -252,12 +337,18 @@ window.AKINS_DATA = {
    "sku": "AKN010"
   },
   {
-   "id": "akins-crimson-espadrille-mules",
-   "name": "Akins Crimson Espadrille Mules",
+   "id": "akins-noir-split-toe-mules",
+   "name": "Akins Noir Split-Toe Mules",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
-   "image": "images/products/akins-crimson-espadrille-mules.jpg",
+   "image": "images/products/akins-noir-split-toe-mules.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-split-toe-mules.jpg"
+    }
+   ],
    "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
    "sizes": [
     39,
@@ -274,13 +365,95 @@ window.AKINS_DATA = {
    "sku": "AKN011"
   },
   {
-   "id": "akins-noir-triangle-mules",
-   "name": "Akins Noir Triangle Mules",
-   "category": "half-shoes",
-   "price": 130000,
+   "id": "akins-signature-h-cutout-leather-slides",
+   "name": "Akins Signature H-Cutout Leather Slides",
+   "category": "slides",
+   "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-triangle-mules.jpg",
-   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
+   "image": "images/products/akins-signature-h-cutout-leather-slides-navy.jpg",
+   "variants": [
+    {
+     "label": "Navy",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-navy.jpg"
+    },
+    {
+     "label": "Brown",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-brown.jpg"
+    },
+    {
+     "label": "Black",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-black.jpg"
+    },
+    {
+     "label": "Teal",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-teal.jpg"
+    },
+    {
+     "label": "Slate Grey",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-slate-grey.jpg"
+    },
+    {
+     "label": "Noir Leather",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-noir-leather.jpg"
+    },
+    {
+     "label": "Dove Grey",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-dove-grey.jpg"
+    },
+    {
+     "label": "Jet Black",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-jet-black.jpg"
+    },
+    {
+     "label": "Cobalt",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-cobalt.jpg"
+    },
+    {
+     "label": "Mint",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-mint.jpg"
+    },
+    {
+     "label": "Onyx",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-onyx.jpg"
+    },
+    {
+     "label": "Black Classic",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-black-classic.jpg"
+    },
+    {
+     "label": "Light Grey",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-light-grey.jpg"
+    },
+    {
+     "label": "Black & Brown",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-black-brown.jpg"
+    },
+    {
+     "label": "Black & Burgundy",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-black-burgundy.jpg"
+    },
+    {
+     "label": "Midnight",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-midnight.jpg"
+    },
+    {
+     "label": "Sand & Teal",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-sand-teal.jpg"
+    },
+    {
+     "label": "Steel Blue",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-steel-blue.jpg"
+    },
+    {
+     "label": "Brown & Grey",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-brown-grey.jpg"
+    },
+    {
+     "label": "Black & Orange",
+     "image": "images/products/akins-signature-h-cutout-leather-slides-black-orange.jpg"
+    }
+   ],
+   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
     40,
@@ -291,18 +464,32 @@ window.AKINS_DATA = {
     45,
     46
    ],
-   "featured": false,
+   "featured": true,
    "sale": false,
    "sku": "AKN012"
   },
   {
-   "id": "akins-noir-ivory-leather-mules",
-   "name": "Akins Noir Ivory Leather Mules",
-   "category": "half-shoes",
-   "price": 130000,
+   "id": "akins-woven-texture-h-slides",
+   "name": "Akins Woven Texture H Slides",
+   "category": "slides",
+   "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-ivory-leather-mules.jpg",
-   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
+   "image": "images/products/akins-woven-texture-h-slides-noir-sparkle.jpg",
+   "variants": [
+    {
+     "label": "Noir Sparkle",
+     "image": "images/products/akins-woven-texture-h-slides-noir-sparkle.jpg"
+    },
+    {
+     "label": "Noir Weave",
+     "image": "images/products/akins-woven-texture-h-slides-noir-weave.jpg"
+    },
+    {
+     "label": "Noir Crystal",
+     "image": "images/products/akins-woven-texture-h-slides-noir-crystal.jpg"
+    }
+   ],
+   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
     40,
@@ -318,13 +505,27 @@ window.AKINS_DATA = {
    "sku": "AKN013"
   },
   {
-   "id": "akins-noir-suede-clogs",
-   "name": "Akins Noir Suede Clogs",
-   "category": "half-shoes",
-   "price": 130000,
+   "id": "akins-square-buckle-slides",
+   "name": "Akins Square Buckle Slides",
+   "category": "slides",
+   "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-suede-clogs.jpg",
-   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
+   "image": "images/products/akins-square-buckle-slides-noir.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-square-buckle-slides-noir.jpg"
+    },
+    {
+     "label": "Chocolate",
+     "image": "images/products/akins-square-buckle-slides-chocolate.jpg"
+    },
+    {
+     "label": "Pearl Grey",
+     "image": "images/products/akins-square-buckle-slides-pearl-grey.jpg"
+    }
+   ],
+   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
     40,
@@ -340,13 +541,23 @@ window.AKINS_DATA = {
    "sku": "AKN014"
   },
   {
-   "id": "akins-tan-buckle-suede-clogs",
-   "name": "Akins Tan Buckle Suede Clogs",
-   "category": "half-shoes",
-   "price": 130000,
+   "id": "akins-side-buckle-band-slides",
+   "name": "Akins Side Buckle Band Slides",
+   "category": "slides",
+   "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-tan-buckle-suede-clogs.jpg",
-   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
+   "image": "images/products/akins-side-buckle-band-slides-ivory.jpg",
+   "variants": [
+    {
+     "label": "Ivory",
+     "image": "images/products/akins-side-buckle-band-slides-ivory.jpg"
+    },
+    {
+     "label": "Noir",
+     "image": "images/products/akins-side-buckle-band-slides-noir.jpg"
+    }
+   ],
+   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
     40,
@@ -362,13 +573,23 @@ window.AKINS_DATA = {
    "sku": "AKN015"
   },
   {
-   "id": "akins-noir-ivory-forest-mules",
-   "name": "Akins Noir Ivory Forest Mules",
-   "category": "half-shoes",
-   "price": 130000,
+   "id": "akins-emblem-cross-slides",
+   "name": "Akins Emblem Cross Slides",
+   "category": "slides",
+   "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-ivory-forest-mules.jpg",
-   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
+   "image": "images/products/akins-emblem-cross-slides-noir.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-emblem-cross-slides-noir.jpg"
+    },
+    {
+     "label": "Navy",
+     "image": "images/products/akins-emblem-cross-slides-navy.jpg"
+    }
+   ],
+   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
     40,
@@ -384,13 +605,23 @@ window.AKINS_DATA = {
    "sku": "AKN016"
   },
   {
-   "id": "akins-noir-split-toe-mules",
-   "name": "Akins Noir Split-Toe Mules",
-   "category": "half-shoes",
-   "price": 130000,
+   "id": "akins-oblique-print-cross-slides",
+   "name": "Akins Oblique Print Cross Slides",
+   "category": "slides",
+   "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-split-toe-mules.jpg",
-   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
+   "image": "images/products/akins-oblique-print-cross-slides-beige-print.jpg",
+   "variants": [
+    {
+     "label": "Beige Print",
+     "image": "images/products/akins-oblique-print-cross-slides-beige-print.jpg"
+    },
+    {
+     "label": "Slate Print",
+     "image": "images/products/akins-oblique-print-cross-slides-slate-print.jpg"
+    }
+   ],
+   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
     40,
@@ -406,12 +637,22 @@ window.AKINS_DATA = {
    "sku": "AKN017"
   },
   {
-   "id": "akins-tri-tone-suede-cross-slides",
-   "name": "Akins Tri-Tone Suede Cross Slides",
+   "id": "akins-monogram-suede-cross-slides",
+   "name": "Akins Monogram Suede Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-tri-tone-suede-cross-slides.jpg",
+   "image": "images/products/akins-monogram-suede-cross-slides-slate.jpg",
+   "variants": [
+    {
+     "label": "Slate",
+     "image": "images/products/akins-monogram-suede-cross-slides-slate.jpg"
+    },
+    {
+     "label": "Noir",
+     "image": "images/products/akins-monogram-suede-cross-slides-noir.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -428,12 +669,22 @@ window.AKINS_DATA = {
    "sku": "AKN018"
   },
   {
-   "id": "akins-sky-blue-buckle-platform-slides",
-   "name": "Akins Sky Blue Buckle Platform Slides",
+   "id": "akins-embossed-logo-cross-slides",
+   "name": "Akins Embossed Logo Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-sky-blue-buckle-platform-slides.jpg",
+   "image": "images/products/akins-embossed-logo-cross-slides-noir-embossed.jpg",
+   "variants": [
+    {
+     "label": "Noir Embossed",
+     "image": "images/products/akins-embossed-logo-cross-slides-noir-embossed.jpg"
+    },
+    {
+     "label": "Noir Emblem",
+     "image": "images/products/akins-embossed-logo-cross-slides-noir-emblem.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -450,12 +701,22 @@ window.AKINS_DATA = {
    "sku": "AKN019"
   },
   {
-   "id": "akins-noir-buckle-slides",
-   "name": "Akins Noir Buckle Slides",
+   "id": "akins-platform-cross-slides",
+   "name": "Akins Platform Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-buckle-slides.jpg",
+   "image": "images/products/akins-platform-cross-slides-sand.jpg",
+   "variants": [
+    {
+     "label": "Sand",
+     "image": "images/products/akins-platform-cross-slides-sand.jpg"
+    },
+    {
+     "label": "Noir",
+     "image": "images/products/akins-platform-cross-slides-noir.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -472,12 +733,38 @@ window.AKINS_DATA = {
    "sku": "AKN020"
   },
   {
-   "id": "akins-trio-band-slides",
-   "name": "Akins Trio Band Slides",
+   "id": "akins-cross-strap-leather-slides",
+   "name": "Akins Cross Strap Leather Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-trio-band-slides.jpg",
+   "image": "images/products/akins-cross-strap-leather-slides-navy.jpg",
+   "variants": [
+    {
+     "label": "Navy",
+     "image": "images/products/akins-cross-strap-leather-slides-navy.jpg"
+    },
+    {
+     "label": "Graphite",
+     "image": "images/products/akins-cross-strap-leather-slides-graphite.jpg"
+    },
+    {
+     "label": "Noir, Grey & Olive",
+     "image": "images/products/akins-cross-strap-leather-slides-noir-grey-olive.jpg"
+    },
+    {
+     "label": "Chocolate",
+     "image": "images/products/akins-cross-strap-leather-slides-chocolate.jpg"
+    },
+    {
+     "label": "Noir Woven",
+     "image": "images/products/akins-cross-strap-leather-slides-noir-woven.jpg"
+    },
+    {
+     "label": "Noir Wide Band",
+     "image": "images/products/akins-cross-strap-leather-slides-noir-wide-band.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -494,12 +781,22 @@ window.AKINS_DATA = {
    "sku": "AKN021"
   },
   {
-   "id": "akins-noir-embossed-cross-slides",
-   "name": "Akins Noir Embossed Cross Slides",
+   "id": "akins-buckle-strap-slides",
+   "name": "Akins Buckle Strap Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-embossed-cross-slides.jpg",
+   "image": "images/products/akins-buckle-strap-slides-noir.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-buckle-strap-slides-noir.jpg"
+    },
+    {
+     "label": "Olive",
+     "image": "images/products/akins-buckle-strap-slides-olive.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -516,12 +813,22 @@ window.AKINS_DATA = {
    "sku": "AKN022"
   },
   {
-   "id": "akins-noir-woven-cross-slides",
-   "name": "Akins Noir Woven Cross Slides",
+   "id": "akins-padded-comfort-slides",
+   "name": "Akins Padded Comfort Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-woven-cross-slides.jpg",
+   "image": "images/products/akins-padded-comfort-slides-olive-noir.jpg",
+   "variants": [
+    {
+     "label": "Olive & Noir",
+     "image": "images/products/akins-padded-comfort-slides-olive-noir.jpg"
+    },
+    {
+     "label": "Grey",
+     "image": "images/products/akins-padded-comfort-slides-grey.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -538,12 +845,18 @@ window.AKINS_DATA = {
    "sku": "AKN023"
   },
   {
-   "id": "akins-noir-classic-cross-slides",
-   "name": "Akins Noir Classic Cross Slides",
+   "id": "akins-tri-tone-suede-cross-slides",
+   "name": "Akins Tri-Tone Suede Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-classic-cross-slides.jpg",
+   "image": "images/products/akins-tri-tone-suede-cross-slides.jpg",
+   "variants": [
+    {
+     "label": "Tri-Tone",
+     "image": "images/products/akins-tri-tone-suede-cross-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -560,12 +873,18 @@ window.AKINS_DATA = {
    "sku": "AKN024"
   },
   {
-   "id": "akins-slate-monogram-suede-cross-slides",
-   "name": "Akins Slate Monogram Suede Cross Slides",
+   "id": "akins-sky-blue-buckle-platform-slides",
+   "name": "Akins Sky Blue Buckle Platform Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-slate-monogram-suede-cross-slides.jpg",
+   "image": "images/products/akins-sky-blue-buckle-platform-slides.jpg",
+   "variants": [
+    {
+     "label": "Sky",
+     "image": "images/products/akins-sky-blue-buckle-platform-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -577,17 +896,23 @@ window.AKINS_DATA = {
     45,
     46
    ],
-   "featured": true,
+   "featured": false,
    "sale": false,
    "sku": "AKN025"
   },
   {
-   "id": "akins-printed-cross-slides",
-   "name": "Akins Printed Cross Slides",
+   "id": "akins-trio-band-slides",
+   "name": "Akins Trio Band Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-printed-cross-slides.jpg",
+   "image": "images/products/akins-trio-band-slides.jpg",
+   "variants": [
+    {
+     "label": "Trio",
+     "image": "images/products/akins-trio-band-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -604,12 +929,18 @@ window.AKINS_DATA = {
    "sku": "AKN026"
   },
   {
-   "id": "akins-slate-printed-cross-slides",
-   "name": "Akins Slate Printed Cross Slides",
+   "id": "akins-brown-logo-band-cross-slides",
+   "name": "Akins Brown Logo Band Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-slate-printed-cross-slides.jpg",
+   "image": "images/products/akins-brown-logo-band-cross-slides.jpg",
+   "variants": [
+    {
+     "label": "Brown",
+     "image": "images/products/akins-brown-logo-band-cross-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -626,12 +957,18 @@ window.AKINS_DATA = {
    "sku": "AKN027"
   },
   {
-   "id": "akins-noir-emblem-cross-slides",
-   "name": "Akins Noir Emblem Cross Slides",
+   "id": "akins-noir-diamond-cross-slides",
+   "name": "Akins Noir Diamond Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-emblem-cross-slides.jpg",
+   "image": "images/products/akins-noir-diamond-cross-slides.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-diamond-cross-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -648,12 +985,18 @@ window.AKINS_DATA = {
    "sku": "AKN028"
   },
   {
-   "id": "akins-navy-cross-slides",
-   "name": "Akins Navy Cross Slides",
+   "id": "akins-noir-crest-cross-slides",
+   "name": "Akins Noir Crest Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-navy-cross-slides.jpg",
+   "image": "images/products/akins-noir-crest-cross-slides.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-crest-cross-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -670,12 +1013,18 @@ window.AKINS_DATA = {
    "sku": "AKN029"
   },
   {
-   "id": "akins-navy-cut-out-slides",
-   "name": "Akins Navy Cut-Out Slides",
+   "id": "akins-noir-caged-slides",
+   "name": "Akins Noir Caged Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-navy-cut-out-slides.jpg",
+   "image": "images/products/akins-noir-caged-slides.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-caged-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -692,12 +1041,18 @@ window.AKINS_DATA = {
    "sku": "AKN030"
   },
   {
-   "id": "akins-sand-suede-cross-platform-slides",
-   "name": "Akins Sand Suede Cross Platform Slides",
+   "id": "akins-noir-logo-cross-slides",
+   "name": "Akins Noir Logo Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-sand-suede-cross-platform-slides.jpg",
+   "image": "images/products/akins-noir-logo-cross-slides.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-logo-cross-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -714,12 +1069,18 @@ window.AKINS_DATA = {
    "sku": "AKN031"
   },
   {
-   "id": "akins-chocolate-cut-out-slides",
-   "name": "Akins Chocolate Cut-Out Slides",
+   "id": "akins-navy-espadrille-slides",
+   "name": "Akins Navy Espadrille Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-chocolate-cut-out-slides.jpg",
+   "image": "images/products/akins-navy-espadrille-slides.jpg",
+   "variants": [
+    {
+     "label": "Navy",
+     "image": "images/products/akins-navy-espadrille-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -736,12 +1097,18 @@ window.AKINS_DATA = {
    "sku": "AKN032"
   },
   {
-   "id": "akins-noir-cut-out-slides",
-   "name": "Akins Noir Cut-Out Slides",
+   "id": "akins-noir-textured-cross-slides",
+   "name": "Akins Noir Textured Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-cut-out-slides.jpg",
+   "image": "images/products/akins-noir-textured-cross-slides.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-textured-cross-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -758,12 +1125,18 @@ window.AKINS_DATA = {
    "sku": "AKN033"
   },
   {
-   "id": "akins-noir-wide-strap-cross-slides",
-   "name": "Akins Noir Wide Strap Cross Slides",
+   "id": "akins-noir-triangle-cross-slides",
+   "name": "Akins Noir Triangle Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
-   "image": "images/products/akins-noir-wide-strap-cross-slides.jpg",
+   "image": "images/products/akins-noir-triangle-cross-slides.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-triangle-cross-slides.jpg"
+    }
+   ],
    "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
    "sizes": [
     39,
@@ -780,13 +1153,35 @@ window.AKINS_DATA = {
    "sku": "AKN034"
   },
   {
-   "id": "akins-teal-cut-out-slides",
-   "name": "Akins Teal Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-retro-4-hi-top-sneakers",
+   "name": "Akins Retro 4 Hi-Top Sneakers",
+   "category": "sneakers",
+   "price": 240000,
    "compareAt": null,
-   "image": "images/products/akins-teal-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-retro-4-hi-top-sneakers-white-red.jpg",
+   "variants": [
+    {
+     "label": "White & Red",
+     "image": "images/products/akins-retro-4-hi-top-sneakers-white-red.jpg"
+    },
+    {
+     "label": "Black & Slate",
+     "image": "images/products/akins-retro-4-hi-top-sneakers-black-slate.jpg"
+    },
+    {
+     "label": "Fire Red",
+     "image": "images/products/akins-retro-4-hi-top-sneakers-fire-red.jpg"
+    },
+    {
+     "label": "White & Green",
+     "image": "images/products/akins-retro-4-hi-top-sneakers-white-green.jpg"
+    },
+    {
+     "label": "Taupe",
+     "image": "images/products/akins-retro-4-hi-top-sneakers-taupe.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -797,18 +1192,32 @@ window.AKINS_DATA = {
     45,
     46
    ],
-   "featured": false,
+   "featured": true,
    "sale": false,
    "sku": "AKN035"
   },
   {
-   "id": "akins-noir-buckle-band-slides",
-   "name": "Akins Noir Buckle Band Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-retro-3-hi-top-sneakers",
+   "name": "Akins Retro 3 Hi-Top Sneakers",
+   "category": "sneakers",
+   "price": 240000,
    "compareAt": null,
-   "image": "images/products/akins-noir-buckle-band-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-retro-3-hi-top-sneakers-white-purple.jpg",
+   "variants": [
+    {
+     "label": "White & Purple",
+     "image": "images/products/akins-retro-3-hi-top-sneakers-white-purple.jpg"
+    },
+    {
+     "label": "White Cement",
+     "image": "images/products/akins-retro-3-hi-top-sneakers-white-cement.jpg"
+    },
+    {
+     "label": "Noir Suede",
+     "image": "images/products/akins-retro-3-hi-top-sneakers-noir-suede.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -824,35 +1233,31 @@ window.AKINS_DATA = {
    "sku": "AKN036"
   },
   {
-   "id": "akins-chestnut-buckle-band-slides",
-   "name": "Akins Chestnut Buckle Band Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-retro-12-hi-top-sneakers",
+   "name": "Akins Retro 12 Hi-Top Sneakers",
+   "category": "sneakers",
+   "price": 240000,
    "compareAt": null,
-   "image": "images/products/akins-chestnut-buckle-band-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
+   "image": "images/products/akins-retro-12-hi-top-sneakers-stealth-grey.jpg",
+   "variants": [
+    {
+     "label": "Stealth Grey",
+     "image": "images/products/akins-retro-12-hi-top-sneakers-stealth-grey.jpg"
+    },
+    {
+     "label": "Wolf Grey",
+     "image": "images/products/akins-retro-12-hi-top-sneakers-wolf-grey.jpg"
+    },
+    {
+     "label": "Taxi",
+     "image": "images/products/akins-retro-12-hi-top-sneakers-taxi.jpg"
+    },
+    {
+     "label": "Ice Blue",
+     "image": "images/products/akins-retro-12-hi-top-sneakers-ice-blue.jpg"
+    }
    ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN037"
-  },
-  {
-   "id": "akins-noir-monogram-suede-cross-slides",
-   "name": "Akins Noir Monogram Suede Cross Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-monogram-suede-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -865,16 +1270,62 @@ window.AKINS_DATA = {
    ],
    "featured": true,
    "sale": false,
+   "sku": "AKN037"
+  },
+  {
+   "id": "akins-retro-13-hi-top-sneakers",
+   "name": "Akins Retro 13 Hi-Top Sneakers",
+   "category": "sneakers",
+   "price": 230000,
+   "compareAt": null,
+   "image": "images/products/akins-retro-13-hi-top-sneakers.jpg",
+   "variants": [
+    {
+     "label": "Black & Slate",
+     "image": "images/products/akins-retro-13-hi-top-sneakers.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
+   "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "featured": false,
+   "sale": false,
    "sku": "AKN038"
   },
   {
-   "id": "akins-midnight-cross-slides",
-   "name": "Akins Midnight Cross Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-air-runner-sneakers",
+   "name": "Akins Air Runner Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-midnight-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-air-runner-sneakers-crimson.jpg",
+   "variants": [
+    {
+     "label": "Crimson",
+     "image": "images/products/akins-air-runner-sneakers-crimson.jpg"
+    },
+    {
+     "label": "Ember",
+     "image": "images/products/akins-air-runner-sneakers-ember.jpg"
+    },
+    {
+     "label": "Tangerine",
+     "image": "images/products/akins-air-runner-sneakers-tangerine.jpg"
+    },
+    {
+     "label": "Noir Mesh",
+     "image": "images/products/akins-air-runner-sneakers-noir-mesh.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -890,13 +1341,27 @@ window.AKINS_DATA = {
    "sku": "AKN039"
   },
   {
-   "id": "akins-graphite-cut-out-slides",
-   "name": "Akins Graphite Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-shox-runner-sneakers",
+   "name": "Akins Shox Runner Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-graphite-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-shox-runner-sneakers-silver.jpg",
+   "variants": [
+    {
+     "label": "Silver",
+     "image": "images/products/akins-shox-runner-sneakers-silver.jpg"
+    },
+    {
+     "label": "Noir Crimson",
+     "image": "images/products/akins-shox-runner-sneakers-noir-crimson.jpg"
+    },
+    {
+     "label": "Pearl Crimson",
+     "image": "images/products/akins-shox-runner-sneakers-pearl-crimson.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -912,13 +1377,23 @@ window.AKINS_DATA = {
    "sku": "AKN040"
   },
   {
-   "id": "akins-three-colour-cross-slides",
-   "name": "Akins Three-Colour Cross Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-patent-runner-sneakers",
+   "name": "Akins Patent Runner Sneakers",
+   "category": "sneakers",
+   "price": 135000,
    "compareAt": null,
-   "image": "images/products/akins-three-colour-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-patent-runner-sneakers-burgundy.jpg",
+   "variants": [
+    {
+     "label": "Burgundy",
+     "image": "images/products/akins-patent-runner-sneakers-burgundy.jpg"
+    },
+    {
+     "label": "Navy Chrome",
+     "image": "images/products/akins-patent-runner-sneakers-navy-chrome.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -929,18 +1404,28 @@ window.AKINS_DATA = {
     45,
     46
    ],
-   "featured": false,
+   "featured": true,
    "sale": false,
    "sku": "AKN041"
   },
   {
-   "id": "akins-charcoal-cut-out-slides",
-   "name": "Akins Charcoal Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-three-stripe-court-sneakers",
+   "name": "Akins Three-Stripe Court Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-charcoal-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-three-stripe-court-sneakers-cream-noir.jpg",
+   "variants": [
+    {
+     "label": "Cream & Noir",
+     "image": "images/products/akins-three-stripe-court-sneakers-cream-noir.jpg"
+    },
+    {
+     "label": "Cream & Navy",
+     "image": "images/products/akins-three-stripe-court-sneakers-cream-navy.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -956,13 +1441,31 @@ window.AKINS_DATA = {
    "sku": "AKN042"
   },
   {
-   "id": "akins-noir-leather-cut-out-slides",
-   "name": "Akins Noir Leather Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-skate-low-sneakers",
+   "name": "Akins Skate Low Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-noir-leather-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-skate-low-sneakers-red-noir.jpg",
+   "variants": [
+    {
+     "label": "Red & Noir",
+     "image": "images/products/akins-skate-low-sneakers-red-noir.jpg"
+    },
+    {
+     "label": "Distressed Denim",
+     "image": "images/products/akins-skate-low-sneakers-distressed-denim.jpg"
+    },
+    {
+     "label": "Navy Charms",
+     "image": "images/products/akins-skate-low-sneakers-navy-charms.jpg"
+    },
+    {
+     "label": "Sky Charms",
+     "image": "images/products/akins-skate-low-sneakers-sky-charms.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -978,13 +1481,31 @@ window.AKINS_DATA = {
    "sku": "AKN043"
   },
   {
-   "id": "akins-noir-woven-texture-slides",
-   "name": "Akins Noir Woven Texture Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-trail-runner-sneakers",
+   "name": "Akins Trail Runner Sneakers",
+   "category": "sneakers",
+   "price": 250000,
    "compareAt": null,
-   "image": "images/products/akins-noir-woven-texture-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-trail-runner-sneakers-noir.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-trail-runner-sneakers-noir.jpg"
+    },
+    {
+     "label": "Olive",
+     "image": "images/products/akins-trail-runner-sneakers-olive.jpg"
+    },
+    {
+     "label": "Black",
+     "image": "images/products/akins-trail-runner-sneakers-black.jpg"
+    },
+    {
+     "label": "Black & Cream",
+     "image": "images/products/akins-trail-runner-sneakers-black-cream.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -1000,13 +1521,27 @@ window.AKINS_DATA = {
    "sku": "AKN044"
   },
   {
-   "id": "akins-brown-logo-band-cross-slides",
-   "name": "Akins Brown Logo Band Cross Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-low-top-dunk-sneakers",
+   "name": "Akins Low-Top Dunk Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-brown-logo-band-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-low-top-dunk-sneakers-washed-noir.jpg",
+   "variants": [
+    {
+     "label": "Washed Noir",
+     "image": "images/products/akins-low-top-dunk-sneakers-washed-noir.jpg"
+    },
+    {
+     "label": "Blue Sunset",
+     "image": "images/products/akins-low-top-dunk-sneakers-blue-sunset.jpg"
+    },
+    {
+     "label": "Red & White",
+     "image": "images/products/akins-low-top-dunk-sneakers-red-white.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -1022,13 +1557,23 @@ window.AKINS_DATA = {
    "sku": "AKN045"
   },
   {
-   "id": "akins-noir-pattern-cut-out-slides",
-   "name": "Akins Noir Pattern Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-classic-low-court-sneakers",
+   "name": "Akins Classic Low Court Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-noir-pattern-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-classic-low-court-sneakers-cream.jpg",
+   "variants": [
+    {
+     "label": "Cream",
+     "image": "images/products/akins-classic-low-court-sneakers-cream.jpg"
+    },
+    {
+     "label": "White & Red",
+     "image": "images/products/akins-classic-low-court-sneakers-white-red.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -1044,13 +1589,19 @@ window.AKINS_DATA = {
    "sku": "AKN046"
   },
   {
-   "id": "akins-sage-two-tone-cut-out-slides",
-   "name": "Akins Sage Two-Tone Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-white-graffiti-low-sneakers",
+   "name": "Akins White Graffiti Low Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-sage-two-tone-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-white-graffiti-low-sneakers.jpg",
+   "variants": [
+    {
+     "label": "White",
+     "image": "images/products/akins-white-graffiti-low-sneakers.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -1066,13 +1617,19 @@ window.AKINS_DATA = {
    "sku": "AKN047"
   },
   {
-   "id": "akins-black-gloss-cut-out-slides",
-   "name": "Akins Black Gloss Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-noir-canvas-low-top-sneakers",
+   "name": "Akins Noir Canvas Low-Top Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-black-gloss-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-noir-canvas-low-top-sneakers.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-canvas-low-top-sneakers.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -1088,13 +1645,19 @@ window.AKINS_DATA = {
    "sku": "AKN048"
   },
   {
-   "id": "akins-royal-blue-cut-out-slides",
-   "name": "Akins Royal Blue Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-classic-white-trainer-sneakers",
+   "name": "Akins Classic White Trainer Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-royal-blue-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-classic-white-trainer-sneakers.jpg",
+   "variants": [
+    {
+     "label": "Classic",
+     "image": "images/products/akins-classic-white-trainer-sneakers.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -1110,13 +1673,19 @@ window.AKINS_DATA = {
    "sku": "AKN049"
   },
   {
-   "id": "akins-padded-comfort-slides",
-   "name": "Akins Padded Comfort Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-olive-rope-lace-sneakers",
+   "name": "Akins Olive Rope Lace Sneakers",
+   "category": "sneakers",
+   "price": 150000,
    "compareAt": null,
-   "image": "images/products/akins-padded-comfort-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "image": "images/products/akins-olive-rope-lace-sneakers.jpg",
+   "variants": [
+    {
+     "label": "Olive",
+     "image": "images/products/akins-olive-rope-lace-sneakers.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
    "sizes": [
     39,
     40,
@@ -1132,1673 +1701,94 @@ window.AKINS_DATA = {
    "sku": "AKN050"
   },
   {
-   "id": "akins-ivory-buckle-slides",
-   "name": "Akins Ivory Buckle Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-slim-dress-watch",
+   "name": "Akins Slim Dress Watch",
+   "category": "watches",
+   "price": 120000,
    "compareAt": null,
-   "image": "images/products/akins-ivory-buckle-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
+   "image": "images/products/akins-slim-dress-watch-gold-burgundy.jpg",
+   "variants": [
+    {
+     "label": "Gold Burgundy",
+     "image": "images/products/akins-slim-dress-watch-gold-burgundy.jpg"
+    },
+    {
+     "label": "Two-Tone Wine",
+     "image": "images/products/akins-slim-dress-watch-two-tone-wine.jpg"
+    },
+    {
+     "label": "Gold Sage",
+     "image": "images/products/akins-slim-dress-watch-gold-sage.jpg"
+    },
+    {
+     "label": "Rose Olive",
+     "image": "images/products/akins-slim-dress-watch-rose-olive.jpg"
+    },
+    {
+     "label": "Steel Olive",
+     "image": "images/products/akins-slim-dress-watch-steel-olive.jpg"
+    },
+    {
+     "label": "Gold Smoke",
+     "image": "images/products/akins-slim-dress-watch-gold-smoke.jpg"
+    },
+    {
+     "label": "Rose Smoke",
+     "image": "images/products/akins-slim-dress-watch-rose-smoke.jpg"
+    },
+    {
+     "label": "Rose Slate",
+     "image": "images/products/akins-slim-dress-watch-rose-slate.jpg"
+    },
+    {
+     "label": "Steel Slate",
+     "image": "images/products/akins-slim-dress-watch-steel-slate.jpg"
+    },
+    {
+     "label": "Rose Burgundy",
+     "image": "images/products/akins-slim-dress-watch-rose-burgundy.jpg"
+    },
+    {
+     "label": "Gold Forest",
+     "image": "images/products/akins-slim-dress-watch-gold-forest.jpg"
+    },
+    {
+     "label": "Steel Burgundy",
+     "image": "images/products/akins-slim-dress-watch-steel-burgundy.jpg"
+    }
    ],
-   "featured": false,
+   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
+   "sizes": [],
+   "featured": true,
    "sale": false,
    "sku": "AKN051"
   },
   {
-   "id": "akins-mint-cut-out-slides",
-   "name": "Akins Mint Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
+   "id": "akins-sport-luxe-bracelet-watch",
+   "name": "Akins Sport Luxe Bracelet Watch",
+   "category": "watches",
+   "price": 200000,
    "compareAt": null,
-   "image": "images/products/akins-mint-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
+   "image": "images/products/akins-sport-luxe-bracelet-watch-steel-navy.jpg",
+   "variants": [
+    {
+     "label": "Steel Navy",
+     "image": "images/products/akins-sport-luxe-bracelet-watch-steel-navy.jpg"
+    },
+    {
+     "label": "Steel Ivory Moonphase",
+     "image": "images/products/akins-sport-luxe-bracelet-watch-steel-ivory-moonphase.jpg"
+    },
+    {
+     "label": "Rose Cocoa",
+     "image": "images/products/akins-sport-luxe-bracelet-watch-rose-cocoa.jpg"
+    }
    ],
-   "featured": false,
+   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
+   "sizes": [],
+   "featured": true,
    "sale": false,
    "sku": "AKN052"
-  },
-  {
-   "id": "akins-noir-sparkle-cut-out-slides",
-   "name": "Akins Noir Sparkle Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-sparkle-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN053"
-  },
-  {
-   "id": "akins-noir-diamond-cross-slides",
-   "name": "Akins Noir Diamond Cross Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-diamond-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN054"
-  },
-  {
-   "id": "akins-noir-smooth-cut-out-slides",
-   "name": "Akins Noir Smooth Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-smooth-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN055"
-  },
-  {
-   "id": "akins-pearl-grey-cut-out-slides",
-   "name": "Akins Pearl Grey Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-pearl-grey-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN056"
-  },
-  {
-   "id": "akins-noir-strap-cut-out-slides",
-   "name": "Akins Noir Strap Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-strap-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN057"
-  },
-  {
-   "id": "akins-noir-square-buckle-slides",
-   "name": "Akins Noir Square Buckle Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-square-buckle-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN058"
-  },
-  {
-   "id": "akins-silver-grey-cut-out-slides",
-   "name": "Akins Silver Grey Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-silver-grey-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN059"
-  },
-  {
-   "id": "akins-chocolate-two-tone-slides",
-   "name": "Akins Chocolate Two-Tone Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-chocolate-two-tone-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN060"
-  },
-  {
-   "id": "akins-noir-burgundy-cut-out-slides",
-   "name": "Akins Noir Burgundy Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-burgundy-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN061"
-  },
-  {
-   "id": "akins-navy-strap-cut-out-slides",
-   "name": "Akins Navy Strap Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-navy-strap-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN062"
-  },
-  {
-   "id": "akins-noir-embossed-strap-cross-slides",
-   "name": "Akins Noir Embossed Strap Cross Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-embossed-strap-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN063"
-  },
-  {
-   "id": "akins-blush-teal-cut-out-slides",
-   "name": "Akins Blush Teal Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-blush-teal-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN064"
-  },
-  {
-   "id": "akins-noir-suede-cross-platform-slides",
-   "name": "Akins Noir Suede Cross Platform Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-suede-cross-platform-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN065"
-  },
-  {
-   "id": "akins-steel-blue-cut-out-slides",
-   "name": "Akins Steel Blue Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-blue-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN066"
-  },
-  {
-   "id": "akins-chocolate-grey-cut-out-slides",
-   "name": "Akins Chocolate Grey Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-chocolate-grey-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN067"
-  },
-  {
-   "id": "akins-chestnut-cross-slides",
-   "name": "Akins Chestnut Cross Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-chestnut-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN068"
-  },
-  {
-   "id": "akins-noir-caged-slides",
-   "name": "Akins Noir Caged Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-caged-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN069"
-  },
-  {
-   "id": "akins-slate-padded-slides",
-   "name": "Akins Slate Padded Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-slate-padded-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN070"
-  },
-  {
-   "id": "akins-noir-cross-emblem-slides",
-   "name": "Akins Noir Cross Emblem Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-cross-emblem-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN071"
-  },
-  {
-   "id": "akins-navy-espadrille-slides",
-   "name": "Akins Navy Espadrille Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-navy-espadrille-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN072"
-  },
-  {
-   "id": "akins-olive-buckle-slides",
-   "name": "Akins Olive Buckle Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-olive-buckle-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN073"
-  },
-  {
-   "id": "akins-noir-orange-cut-out-slides",
-   "name": "Akins Noir Orange Cut-Out Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-orange-cut-out-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN074"
-  },
-  {
-   "id": "akins-noir-textured-cross-slides",
-   "name": "Akins Noir Textured Cross Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-textured-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN075"
-  },
-  {
-   "id": "akins-noir-triangle-cross-slides",
-   "name": "Akins Noir Triangle Cross Slides",
-   "category": "slides",
-   "price": 85000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-triangle-cross-slides.jpg",
-   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN076"
-  },
-  {
-   "id": "akins-slate-retro-hi-top-sneakers",
-   "name": "Akins Slate Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 230000,
-   "compareAt": null,
-   "image": "images/products/akins-slate-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN077"
-  },
-  {
-   "id": "akins-white-graffiti-low-sneakers",
-   "name": "Akins White Graffiti Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-white-graffiti-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN078"
-  },
-  {
-   "id": "akins-burgundy-patent-runner-sneakers",
-   "name": "Akins Burgundy Patent Runner Sneakers",
-   "category": "sneakers",
-   "price": 135000,
-   "compareAt": null,
-   "image": "images/products/akins-burgundy-patent-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN079"
-  },
-  {
-   "id": "akins-cream-stripe-court-sneakers",
-   "name": "Akins Cream Stripe Court Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-cream-stripe-court-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN080"
-  },
-  {
-   "id": "akins-purple-cement-retro-hi-top-sneakers",
-   "name": "Akins Purple Cement Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-purple-cement-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN081"
-  },
-  {
-   "id": "akins-washed-noir-low-sneakers",
-   "name": "Akins Washed Noir Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-washed-noir-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN082"
-  },
-  {
-   "id": "akins-silver-air-runner-sneakers",
-   "name": "Akins Silver Air Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-silver-air-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN083"
-  },
-  {
-   "id": "akins-cream-panel-court-low-sneakers",
-   "name": "Akins Cream Panel Court Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-cream-panel-court-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN084"
-  },
-  {
-   "id": "akins-noir-trail-runner-sneakers",
-   "name": "Akins Noir Trail Runner Sneakers",
-   "category": "sneakers",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-trail-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN085"
-  },
-  {
-   "id": "akins-stealth-retro-12-hi-top-sneakers",
-   "name": "Akins Stealth Retro 12 Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-stealth-retro-12-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN086"
-  },
-  {
-   "id": "akins-dark-grey-retro-hi-top-sneakers",
-   "name": "Akins Dark Grey Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-dark-grey-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN087"
-  },
-  {
-   "id": "akins-noir-canvas-low-top-sneakers",
-   "name": "Akins Noir Canvas Low-Top Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-canvas-low-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN088"
-  },
-  {
-   "id": "akins-crimson-air-runner-sneakers",
-   "name": "Akins Crimson Air Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-crimson-air-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN089"
-  },
-  {
-   "id": "akins-fire-red-retro-hi-top-sneakers",
-   "name": "Akins Fire Red Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-fire-red-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN090"
-  },
-  {
-   "id": "akins-noir-slate-retro-hi-top-sneakers",
-   "name": "Akins Noir Slate Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-slate-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN091"
-  },
-  {
-   "id": "akins-denim-skate-low-sneakers",
-   "name": "Akins Denim Skate Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-denim-skate-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN092"
-  },
-  {
-   "id": "akins-ember-tuned-runner-sneakers",
-   "name": "Akins Ember Tuned Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-ember-tuned-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN093"
-  },
-  {
-   "id": "akins-red-white-retro-hi-top-sneakers",
-   "name": "Akins Red White Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-red-white-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN094"
-  },
-  {
-   "id": "akins-pure-white-court-low-sneakers",
-   "name": "Akins Pure White Court Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-pure-white-court-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN095"
-  },
-  {
-   "id": "akins-taxi-retro-12-hi-top-sneakers",
-   "name": "Akins Taxi Retro 12 Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-taxi-retro-12-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN096"
-  },
-  {
-   "id": "akins-white-cement-retro-hi-top-sneakers",
-   "name": "Akins White Cement Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-white-cement-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN097"
-  },
-  {
-   "id": "akins-noir-suede-cement-hi-top-sneakers",
-   "name": "Akins Noir Suede Cement Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-suede-cement-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN098"
-  },
-  {
-   "id": "akins-noir-mesh-runner-sneakers",
-   "name": "Akins Noir Mesh Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-mesh-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN099"
-  },
-  {
-   "id": "akins-lime-white-retro-hi-top-sneakers",
-   "name": "Akins Lime White Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-lime-white-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN100"
-  },
-  {
-   "id": "akins-heritage-court-low-sneakers",
-   "name": "Akins Heritage Court Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-heritage-court-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN101"
-  },
-  {
-   "id": "akins-crimson-skate-low-sneakers",
-   "name": "Akins Crimson Skate Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-crimson-skate-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN102"
-  },
-  {
-   "id": "akins-ice-blue-retro-12-sneakers",
-   "name": "Akins Ice Blue Retro 12 Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-ice-blue-retro-12-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN103"
-  },
-  {
-   "id": "akins-forest-retro-runner-sneakers",
-   "name": "Akins Forest Retro Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-forest-retro-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN104"
-  },
-  {
-   "id": "akins-classic-white-trainer-sneakers",
-   "name": "Akins Classic White Trainer Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-classic-white-trainer-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN105"
-  },
-  {
-   "id": "akins-tangerine-mesh-runner-sneakers",
-   "name": "Akins Tangerine Mesh Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-tangerine-mesh-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN106"
-  },
-  {
-   "id": "akins-mocha-retro-hi-top-sneakers",
-   "name": "Akins Mocha Retro Hi-Top Sneakers",
-   "category": "sneakers",
-   "price": 240000,
-   "compareAt": null,
-   "image": "images/products/akins-mocha-retro-hi-top-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN107"
-  },
-  {
-   "id": "akins-noir-crimson-runner-sneakers",
-   "name": "Akins Noir Crimson Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-crimson-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN108"
-  },
-  {
-   "id": "akins-pearl-crimson-runner-sneakers",
-   "name": "Akins Pearl Crimson Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-pearl-crimson-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN109"
-  },
-  {
-   "id": "akins-navy-red-skate-sneakers",
-   "name": "Akins Navy Red Skate Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-navy-red-skate-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN110"
-  },
-  {
-   "id": "akins-olive-rope-lace-sneakers",
-   "name": "Akins Olive Rope Lace Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-olive-rope-lace-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN111"
-  },
-  {
-   "id": "akins-chrome-runner-sneakers",
-   "name": "Akins Chrome Runner Sneakers",
-   "category": "sneakers",
-   "price": 135000,
-   "compareAt": null,
-   "image": "images/products/akins-chrome-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN112"
-  },
-  {
-   "id": "akins-distressed-denim-low-sneakers",
-   "name": "Akins Distressed Denim Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-distressed-denim-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN113"
-  },
-  {
-   "id": "akins-navy-studded-low-sneakers",
-   "name": "Akins Navy Studded Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-navy-studded-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN114"
-  },
-  {
-   "id": "akins-sky-studded-low-sneakers",
-   "name": "Akins Sky Studded Low Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-sky-studded-low-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN115"
-  },
-  {
-   "id": "akins-noir-grey-runner-sneakers",
-   "name": "Akins Noir Grey Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-grey-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN116"
-  },
-  {
-   "id": "akins-noir-cream-runner-sneakers",
-   "name": "Akins Noir Cream Runner Sneakers",
-   "category": "sneakers",
-   "price": 150000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-cream-runner-sneakers.jpg",
-   "description": "Statement sneakers with premium finish and all-day comfort. Check your size before ordering.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN117"
-  },
-  {
-   "id": "akins-gold-burgundy-slim-dress-watch",
-   "name": "Akins Gold Burgundy Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-burgundy-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN118"
-  },
-  {
-   "id": "akins-two-tone-wine-slim-dress-watch",
-   "name": "Akins Two-Tone Wine Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-two-tone-wine-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN119"
-  },
-  {
-   "id": "akins-gold-sage-slim-dress-watch",
-   "name": "Akins Gold Sage Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-sage-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN120"
-  },
-  {
-   "id": "akins-rose-olive-slim-dress-watch",
-   "name": "Akins Rose Olive Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-olive-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN121"
-  },
-  {
-   "id": "akins-steel-olive-slim-dress-watch",
-   "name": "Akins Steel Olive Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-olive-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN122"
-  },
-  {
-   "id": "akins-gold-smoke-slim-dress-watch",
-   "name": "Akins Gold Smoke Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-smoke-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN123"
-  },
-  {
-   "id": "akins-rose-smoke-slim-dress-watch",
-   "name": "Akins Rose Smoke Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-smoke-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN124"
-  },
-  {
-   "id": "akins-rose-gold-slate-slim-dress-watch",
-   "name": "Akins Rose Gold Slate Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-gold-slate-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN125"
-  },
-  {
-   "id": "akins-steel-slate-slim-dress-watch",
-   "name": "Akins Steel Slate Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-slate-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN126"
-  },
-  {
-   "id": "akins-rose-burgundy-slim-dress-watch",
-   "name": "Akins Rose Burgundy Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-burgundy-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN127"
-  },
-  {
-   "id": "akins-gold-forest-slim-dress-watch",
-   "name": "Akins Gold Forest Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-forest-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN128"
-  },
-  {
-   "id": "akins-steel-burgundy-slim-dress-watch",
-   "name": "Akins Steel Burgundy Slim Dress Watch",
-   "category": "watches",
-   "price": 120000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-burgundy-slim-dress-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN129"
-  },
-  {
-   "id": "akins-steel-navy-sport-luxe-watch",
-   "name": "Akins Steel Navy Sport Luxe Watch",
-   "category": "watches",
-   "price": 200000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-navy-sport-luxe-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN130"
-  },
-  {
-   "id": "akins-steel-moonphase-ivory-watch",
-   "name": "Akins Steel Moonphase Ivory Watch",
-   "category": "watches",
-   "price": 200000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-moonphase-ivory-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN131"
-  },
-  {
-   "id": "akins-rose-gold-cocoa-sport-luxe-watch",
-   "name": "Akins Rose Gold Cocoa Sport Luxe Watch",
-   "category": "watches",
-   "price": 200000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-gold-cocoa-sport-luxe-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN132"
   },
   {
    "id": "akins-ocean-blue-diver-watch",
@@ -2807,362 +1797,215 @@ window.AKINS_DATA = {
    "price": 180000,
    "compareAt": null,
    "image": "images/products/akins-ocean-blue-diver-watch.jpg",
+   "variants": [
+    {
+     "label": "Ocean Blue",
+     "image": "images/products/akins-ocean-blue-diver-watch.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN133"
+   "sku": "AKN053"
   },
   {
-   "id": "akins-noir-strap-tourbillon-skeleton-watch",
-   "name": "Akins Noir Strap Tourbillon Skeleton Watch",
+   "id": "akins-skeleton-tourbillon-dress-watch",
+   "name": "Akins Skeleton Tourbillon Dress Watch",
    "category": "watches",
    "price": 250000,
    "compareAt": null,
-   "image": "images/products/akins-noir-strap-tourbillon-skeleton-watch.jpg",
+   "image": "images/products/akins-skeleton-tourbillon-dress-watch-noir-steel.jpg",
+   "variants": [
+    {
+     "label": "Noir Steel",
+     "image": "images/products/akins-skeleton-tourbillon-dress-watch-noir-steel.jpg"
+    },
+    {
+     "label": "Silver White",
+     "image": "images/products/akins-skeleton-tourbillon-dress-watch-silver-white.jpg"
+    },
+    {
+     "label": "Rose Gold",
+     "image": "images/products/akins-skeleton-tourbillon-dress-watch-rose-gold.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN134"
+   "sku": "AKN054"
   },
   {
-   "id": "akins-silver-skeleton-tourbillon-watch",
-   "name": "Akins Silver Skeleton Tourbillon Watch",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-silver-skeleton-tourbillon-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN135"
-  },
-  {
-   "id": "akins-rose-gold-skeleton-tourbillon-watch",
-   "name": "Akins Rose Gold Skeleton Tourbillon Watch",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-gold-skeleton-tourbillon-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN136"
-  },
-  {
-   "id": "akins-full-gold-day-date-sport-watch",
-   "name": "Akins Full Gold Day-Date Sport Watch",
+   "id": "akins-perpetual-tourbillon-bracelet-watch",
+   "name": "Akins Perpetual Tourbillon Bracelet Watch",
    "category": "watches",
    "price": 350000,
    "compareAt": null,
-   "image": "images/products/akins-full-gold-day-date-sport-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN137"
-  },
-  {
-   "id": "akins-emerald-steel-automatic-watch",
-   "name": "Akins Emerald Steel Automatic Watch",
-   "category": "watches",
-   "price": 450000,
-   "compareAt": null,
-   "image": "images/products/akins-emerald-steel-automatic-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN138"
-  },
-  {
-   "id": "akins-rose-burgundy-automatic-watch",
-   "name": "Akins Rose Burgundy Automatic Watch",
-   "category": "watches",
-   "price": 450000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-burgundy-automatic-watch.jpg",
+   "image": "images/products/akins-perpetual-tourbillon-bracelet-watch-full-gold.jpg",
+   "variants": [
+    {
+     "label": "Full Gold",
+     "image": "images/products/akins-perpetual-tourbillon-bracelet-watch-full-gold.jpg"
+    },
+    {
+     "label": "Emerald Steel",
+     "image": "images/products/akins-perpetual-tourbillon-bracelet-watch-emerald-steel.jpg"
+    },
+    {
+     "label": "Rose Burgundy",
+     "image": "images/products/akins-perpetual-tourbillon-bracelet-watch-rose-burgundy.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": true,
    "sale": false,
-   "sku": "AKN139"
+   "sku": "AKN055"
   },
   {
-   "id": "akins-noir-case-chestnut-tourbillon-watch",
-   "name": "Akins Noir Case Chestnut Tourbillon Watch",
+   "id": "akins-tourbillon-chronograph-leather-watch",
+   "name": "Akins Tourbillon Chronograph Leather Watch",
    "category": "watches",
    "price": 250000,
    "compareAt": null,
-   "image": "images/products/akins-noir-case-chestnut-tourbillon-watch.jpg",
+   "image": "images/products/akins-tourbillon-chronograph-leather-watch-noir-chestnut.jpg",
+   "variants": [
+    {
+     "label": "Noir Chestnut",
+     "image": "images/products/akins-tourbillon-chronograph-leather-watch-noir-chestnut.jpg"
+    },
+    {
+     "label": "Navy",
+     "image": "images/products/akins-tourbillon-chronograph-leather-watch-navy.jpg"
+    },
+    {
+     "label": "Chestnut Steel",
+     "image": "images/products/akins-tourbillon-chronograph-leather-watch-chestnut-steel.jpg"
+    },
+    {
+     "label": "Gold Chestnut",
+     "image": "images/products/akins-tourbillon-chronograph-leather-watch-gold-chestnut.jpg"
+    },
+    {
+     "label": "Rose Emerald",
+     "image": "images/products/akins-tourbillon-chronograph-leather-watch-rose-emerald.jpg"
+    },
+    {
+     "label": "Rose Noir",
+     "image": "images/products/akins-tourbillon-chronograph-leather-watch-rose-noir.jpg"
+    },
+    {
+     "label": "Gold Emerald",
+     "image": "images/products/akins-tourbillon-chronograph-leather-watch-gold-emerald.jpg"
+    },
+    {
+     "label": "Rose Ivory",
+     "image": "images/products/akins-tourbillon-chronograph-leather-watch-rose-ivory.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN140"
+   "sku": "AKN056"
   },
   {
-   "id": "akins-navy-strap-tourbillon-chronograph",
-   "name": "Akins Navy Strap Tourbillon Chronograph",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-navy-strap-tourbillon-chronograph.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN141"
-  },
-  {
-   "id": "akins-chestnut-strap-tourbillon-chronograph",
-   "name": "Akins Chestnut Strap Tourbillon Chronograph",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-chestnut-strap-tourbillon-chronograph.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN142"
-  },
-  {
-   "id": "akins-gold-chestnut-tourbillon-chronograph",
-   "name": "Akins Gold Chestnut Tourbillon Chronograph",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-chestnut-tourbillon-chronograph.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN143"
-  },
-  {
-   "id": "akins-emerald-rose-tourbillon-chronograph",
-   "name": "Akins Emerald Rose Tourbillon Chronograph",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-emerald-rose-tourbillon-chronograph.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN144"
-  },
-  {
-   "id": "akins-rose-noir-strap-chronograph",
-   "name": "Akins Rose Noir Strap Chronograph",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-noir-strap-chronograph.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN145"
-  },
-  {
-   "id": "akins-gold-emerald-chronograph",
-   "name": "Akins Gold Emerald Chronograph",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-emerald-chronograph.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN146"
-  },
-  {
-   "id": "akins-rose-ivory-tourbillon-watch",
-   "name": "Akins Rose Ivory Tourbillon Watch",
-   "category": "watches",
-   "price": 250000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-ivory-tourbillon-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN147"
-  },
-  {
-   "id": "akins-rose-navy-open-heart-skeleton-watch",
-   "name": "Akins Rose Navy Open-Heart Skeleton Watch",
+   "id": "akins-open-heart-skeleton-watch",
+   "name": "Akins Open-Heart Skeleton Watch",
    "category": "watches",
    "price": 280000,
    "compareAt": null,
-   "image": "images/products/akins-rose-navy-open-heart-skeleton-watch.jpg",
+   "image": "images/products/akins-open-heart-skeleton-watch-rose-navy.jpg",
+   "variants": [
+    {
+     "label": "Rose Navy",
+     "image": "images/products/akins-open-heart-skeleton-watch-rose-navy.jpg"
+    },
+    {
+     "label": "Steel Noir",
+     "image": "images/products/akins-open-heart-skeleton-watch-steel-noir.jpg"
+    },
+    {
+     "label": "Gold Noir",
+     "image": "images/products/akins-open-heart-skeleton-watch-gold-noir.jpg"
+    },
+    {
+     "label": "Rose Chestnut",
+     "image": "images/products/akins-open-heart-skeleton-watch-rose-chestnut.jpg"
+    },
+    {
+     "label": "Noir Blue",
+     "image": "images/products/akins-open-heart-skeleton-watch-noir-blue.jpg"
+    },
+    {
+     "label": "Rose Cocoa",
+     "image": "images/products/akins-open-heart-skeleton-watch-rose-cocoa.jpg"
+    },
+    {
+     "label": "Gold Navy",
+     "image": "images/products/akins-open-heart-skeleton-watch-gold-navy.jpg"
+    },
+    {
+     "label": "Rose Midnight",
+     "image": "images/products/akins-open-heart-skeleton-watch-rose-midnight.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN148"
+   "sku": "AKN057"
   },
   {
-   "id": "akins-steel-open-heart-skeleton-watch",
-   "name": "Akins Steel Open-Heart Skeleton Watch",
+   "id": "akins-crystal-skeleton-dress-watch",
+   "name": "Akins Crystal Skeleton Dress Watch",
    "category": "watches",
    "price": 280000,
    "compareAt": null,
-   "image": "images/products/akins-steel-open-heart-skeleton-watch.jpg",
+   "image": "images/products/akins-crystal-skeleton-dress-watch-silver.jpg",
+   "variants": [
+    {
+     "label": "Silver",
+     "image": "images/products/akins-crystal-skeleton-dress-watch-silver.jpg"
+    },
+    {
+     "label": "Gold Midnight",
+     "image": "images/products/akins-crystal-skeleton-dress-watch-gold-midnight.jpg"
+    },
+    {
+     "label": "Rose Noir",
+     "image": "images/products/akins-crystal-skeleton-dress-watch-rose-noir.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN149"
+   "sku": "AKN058"
   },
   {
-   "id": "akins-gold-open-heart-skeleton-watch",
-   "name": "Akins Gold Open-Heart Skeleton Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-open-heart-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN150"
-  },
-  {
-   "id": "akins-rose-chestnut-open-heart-skeleton-watch",
-   "name": "Akins Rose Chestnut Open-Heart Skeleton Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-chestnut-open-heart-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN151"
-  },
-  {
-   "id": "akins-noir-blue-open-heart-skeleton-watch",
-   "name": "Akins Noir Blue Open-Heart Skeleton Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-blue-open-heart-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN152"
-  },
-  {
-   "id": "akins-rose-cocoa-skeleton-watch",
-   "name": "Akins Rose Cocoa Skeleton Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-cocoa-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN153"
-  },
-  {
-   "id": "akins-gold-noir-skeleton-watch",
-   "name": "Akins Gold Noir Skeleton Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-noir-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN154"
-  },
-  {
-   "id": "akins-silver-crystal-skeleton-watch",
-   "name": "Akins Silver Crystal Skeleton Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-silver-crystal-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN155"
-  },
-  {
-   "id": "akins-gold-midnight-open-heart-watch",
-   "name": "Akins Gold Midnight Open-Heart Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-midnight-open-heart-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN156"
-  },
-  {
-   "id": "akins-rose-noir-crystal-skeleton-watch",
-   "name": "Akins Rose Noir Crystal Skeleton Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-noir-crystal-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN157"
-  },
-  {
-   "id": "akins-rose-navy-skeleton-watch",
-   "name": "Akins Rose Navy Skeleton Watch",
-   "category": "watches",
-   "price": 280000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-navy-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN158"
-  },
-  {
-   "id": "akins-crystal-case-racer-watch",
-   "name": "Akins Crystal Case Racer Watch",
+   "id": "akins-crystal-racer-watch",
+   "name": "Akins Crystal Racer Watch",
    "category": "watches",
    "price": 600000,
    "compareAt": null,
-   "image": "images/products/akins-crystal-case-racer-watch.jpg",
+   "image": "images/products/akins-crystal-racer-watch-red-gold.jpg",
+   "variants": [
+    {
+     "label": "Red Gold",
+     "image": "images/products/akins-crystal-racer-watch-red-gold.jpg"
+    },
+    {
+     "label": "Rose Clear",
+     "image": "images/products/akins-crystal-racer-watch-rose-clear.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN159"
-  },
-  {
-   "id": "akins-crystal-rose-racer-watch",
-   "name": "Akins Crystal Rose Racer Watch",
-   "category": "watches",
-   "price": 600000,
-   "compareAt": null,
-   "image": "images/products/akins-crystal-rose-racer-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN160"
+   "sku": "AKN059"
   },
   {
    "id": "akins-iced-out-duo-watch",
@@ -3171,11 +2014,17 @@ window.AKINS_DATA = {
    "price": 870000,
    "compareAt": null,
    "image": "images/products/akins-iced-out-duo-watch.jpg",
+   "variants": [
+    {
+     "label": "Gold & Rose",
+     "image": "images/products/akins-iced-out-duo-watch.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN161"
+   "sku": "AKN060"
   },
   {
    "id": "akins-noir-moonphase-watch",
@@ -3184,11 +2033,17 @@ window.AKINS_DATA = {
    "price": 150000,
    "compareAt": null,
    "image": "images/products/akins-noir-moonphase-watch.jpg",
+   "variants": [
+    {
+     "label": "Noir",
+     "image": "images/products/akins-noir-moonphase-watch.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN162"
+   "sku": "AKN061"
   },
   {
    "id": "akins-neon-green-sport-watch",
@@ -3197,11 +2052,17 @@ window.AKINS_DATA = {
    "price": 150000,
    "compareAt": null,
    "image": "images/products/akins-neon-green-sport-watch.jpg",
+   "variants": [
+    {
+     "label": "Neon Green",
+     "image": "images/products/akins-neon-green-sport-watch.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN163"
+   "sku": "AKN062"
   },
   {
    "id": "akins-slim-retro-leather-watch-trio",
@@ -3210,128 +2071,87 @@ window.AKINS_DATA = {
    "price": 90000,
    "compareAt": null,
    "image": "images/products/akins-slim-retro-leather-watch-trio.jpg",
+   "variants": [
+    {
+     "label": "Gold Trio",
+     "image": "images/products/akins-slim-retro-leather-watch-trio.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN164"
+   "sku": "AKN063"
   },
   {
-   "id": "akins-blue-racer-tourbillon-watch",
-   "name": "Akins Blue Racer Tourbillon Watch",
+   "id": "akins-racer-skeleton-tourbillon-watch",
+   "name": "Akins Racer Skeleton Tourbillon Watch",
    "category": "watches",
    "price": 600000,
    "compareAt": null,
-   "image": "images/products/akins-blue-racer-tourbillon-watch.jpg",
+   "image": "images/products/akins-racer-skeleton-tourbillon-watch-blue.jpg",
+   "variants": [
+    {
+     "label": "Blue",
+     "image": "images/products/akins-racer-skeleton-tourbillon-watch-blue.jpg"
+    },
+    {
+     "label": "Rose Gold",
+     "image": "images/products/akins-racer-skeleton-tourbillon-watch-rose-gold.jpg"
+    },
+    {
+     "label": "Rose Noir",
+     "image": "images/products/akins-racer-skeleton-tourbillon-watch-rose-noir.jpg"
+    },
+    {
+     "label": "Red",
+     "image": "images/products/akins-racer-skeleton-tourbillon-watch-red.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN165"
+   "sku": "AKN064"
   },
   {
-   "id": "akins-rose-racer-skeleton-watch",
-   "name": "Akins Rose Racer Skeleton Watch",
-   "category": "watches",
-   "price": 600000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-racer-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN166"
-  },
-  {
-   "id": "akins-rose-gold-engine-skeleton-watch",
-   "name": "Akins Rose Gold Engine Skeleton Watch",
-   "category": "watches",
-   "price": 600000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-gold-engine-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN167"
-  },
-  {
-   "id": "akins-two-tone-jubilee-wine-watch",
-   "name": "Akins Two-Tone Jubilee Wine Watch",
+   "id": "akins-two-tone-jubilee-watch",
+   "name": "Akins Two-Tone Jubilee Watch",
    "category": "watches",
    "price": 350000,
    "compareAt": null,
-   "image": "images/products/akins-two-tone-jubilee-wine-watch.jpg",
+   "image": "images/products/akins-two-tone-jubilee-watch-wine.jpg",
+   "variants": [
+    {
+     "label": "Wine",
+     "image": "images/products/akins-two-tone-jubilee-watch-wine.jpg"
+    },
+    {
+     "label": "Slate Rose",
+     "image": "images/products/akins-two-tone-jubilee-watch-slate-rose.jpg"
+    },
+    {
+     "label": "Rose",
+     "image": "images/products/akins-two-tone-jubilee-watch-rose.jpg"
+    },
+    {
+     "label": "Ruby",
+     "image": "images/products/akins-two-tone-jubilee-watch-ruby.jpg"
+    },
+    {
+     "label": "Gold Champagne",
+     "image": "images/products/akins-two-tone-jubilee-watch-gold-champagne.jpg"
+    },
+    {
+     "label": "Emerald",
+     "image": "images/products/akins-two-tone-jubilee-watch-emerald.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN168"
-  },
-  {
-   "id": "akins-rose-two-tone-jubilee-slate-watch",
-   "name": "Akins Rose Two-Tone Jubilee Slate Watch",
-   "category": "watches",
-   "price": 350000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-two-tone-jubilee-slate-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": true,
-   "sale": false,
-   "sku": "AKN169"
-  },
-  {
-   "id": "akins-two-tone-jubilee-rose-watch",
-   "name": "Akins Two-Tone Jubilee Rose Watch",
-   "category": "watches",
-   "price": 350000,
-   "compareAt": null,
-   "image": "images/products/akins-two-tone-jubilee-rose-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN170"
-  },
-  {
-   "id": "akins-two-tone-jubilee-ruby-watch",
-   "name": "Akins Two-Tone Jubilee Ruby Watch",
-   "category": "watches",
-   "price": 350000,
-   "compareAt": null,
-   "image": "images/products/akins-two-tone-jubilee-ruby-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN171"
-  },
-  {
-   "id": "akins-gold-champagne-day-date-watch",
-   "name": "Akins Gold Champagne Day-Date Watch",
-   "category": "watches",
-   "price": 350000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-champagne-day-date-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN172"
-  },
-  {
-   "id": "akins-two-tone-jubilee-emerald-watch",
-   "name": "Akins Two-Tone Jubilee Emerald Watch",
-   "category": "watches",
-   "price": 350000,
-   "compareAt": null,
-   "image": "images/products/akins-two-tone-jubilee-emerald-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN173"
+   "sku": "AKN065"
   },
   {
    "id": "akins-gold-noir-chronograph-watch",
@@ -3340,11 +2160,17 @@ window.AKINS_DATA = {
    "price": 180000,
    "compareAt": null,
    "image": "images/products/akins-gold-noir-chronograph-watch.jpg",
+   "variants": [
+    {
+     "label": "Gold & Noir",
+     "image": "images/products/akins-gold-noir-chronograph-watch.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN174"
+   "sku": "AKN066"
   },
   {
    "id": "akins-iced-out-tonneau-watch",
@@ -3353,11 +2179,17 @@ window.AKINS_DATA = {
    "price": 870000,
    "compareAt": null,
    "image": "images/products/akins-iced-out-tonneau-watch.jpg",
+   "variants": [
+    {
+     "label": "Iced Silver",
+     "image": "images/products/akins-iced-out-tonneau-watch.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN175"
+   "sku": "AKN067"
   },
   {
    "id": "akins-two-tone-skeleton-chronograph-watch",
@@ -3366,24 +2198,17 @@ window.AKINS_DATA = {
    "price": 220000,
    "compareAt": null,
    "image": "images/products/akins-two-tone-skeleton-chronograph-watch.jpg",
+   "variants": [
+    {
+     "label": "Two-Tone",
+     "image": "images/products/akins-two-tone-skeleton-chronograph-watch.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN176"
-  },
-  {
-   "id": "akins-red-racer-skeleton-watch",
-   "name": "Akins Red Racer Skeleton Watch",
-   "category": "watches",
-   "price": 600000,
-   "compareAt": null,
-   "image": "images/products/akins-red-racer-skeleton-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN177"
+   "sku": "AKN068"
   },
   {
    "id": "akins-rose-gold-octagon-watch",
@@ -3391,38 +2216,88 @@ window.AKINS_DATA = {
    "category": "watches",
    "price": 450000,
    "compareAt": null,
-   "image": "images/products/akins-rose-gold-octagon-watch.jpg",
+   "image": "images/products/akins-rose-gold-octagon-watch-rose-ivory.jpg",
+   "variants": [
+    {
+     "label": "Rose Ivory",
+     "image": "images/products/akins-rose-gold-octagon-watch-rose-ivory.jpg"
+    },
+    {
+     "label": "Rainbow Bezel",
+     "image": "images/products/akins-rose-gold-octagon-watch-rainbow-bezel.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN178"
+   "sku": "AKN069"
   },
   {
-   "id": "akins-crystal-skeleton-leather-watch-with-spare-strap",
-   "name": "Akins Crystal Skeleton Leather Watch with Spare Strap",
+   "id": "akins-crystal-skeleton-watch-with-spare-strap",
+   "name": "Akins Crystal Skeleton Watch with Spare Strap",
    "category": "watches",
    "price": 300000,
    "compareAt": null,
-   "image": "images/products/akins-crystal-skeleton-leather-watch-with-spare-strap.jpg",
+   "image": "images/products/akins-crystal-skeleton-watch-with-spare-strap.jpg",
+   "variants": [
+    {
+     "label": "Crystal",
+     "image": "images/products/akins-crystal-skeleton-watch-with-spare-strap.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN179"
+   "sku": "AKN070"
   },
   {
-   "id": "akins-rose-gold-rainbow-bezel-watch",
-   "name": "Akins Rose Gold Rainbow Bezel Watch",
+   "id": "akins-roman-dial-bracelet-watch",
+   "name": "Akins Roman Dial Bracelet Watch",
    "category": "watches",
-   "price": 450000,
+   "price": 220000,
    "compareAt": null,
-   "image": "images/products/akins-rose-gold-rainbow-bezel-watch.jpg",
+   "image": "images/products/akins-roman-dial-bracelet-watch-steel-burgundy.jpg",
+   "variants": [
+    {
+     "label": "Steel Burgundy",
+     "image": "images/products/akins-roman-dial-bracelet-watch-steel-burgundy.jpg"
+    },
+    {
+     "label": "Rose Navy",
+     "image": "images/products/akins-roman-dial-bracelet-watch-rose-navy.jpg"
+    },
+    {
+     "label": "Rose Noir",
+     "image": "images/products/akins-roman-dial-bracelet-watch-rose-noir.jpg"
+    },
+    {
+     "label": "Steel Emerald",
+     "image": "images/products/akins-roman-dial-bracelet-watch-steel-emerald.jpg"
+    },
+    {
+     "label": "Rose Ivory",
+     "image": "images/products/akins-roman-dial-bracelet-watch-rose-ivory.jpg"
+    },
+    {
+     "label": "Steel Slate",
+     "image": "images/products/akins-roman-dial-bracelet-watch-steel-slate.jpg"
+    },
+    {
+     "label": "Rose Forest",
+     "image": "images/products/akins-roman-dial-bracelet-watch-rose-forest.jpg"
+    },
+    {
+     "label": "Steel Ivory",
+     "image": "images/products/akins-roman-dial-bracelet-watch-steel-ivory.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN180"
+   "sku": "AKN071"
   },
   {
    "id": "akins-open-heart-skeleton-watch-pair",
@@ -3431,180 +2306,52 @@ window.AKINS_DATA = {
    "price": 300000,
    "compareAt": null,
    "image": "images/products/akins-open-heart-skeleton-watch-pair.jpg",
+   "variants": [
+    {
+     "label": "Rose & Noir",
+     "image": "images/products/akins-open-heart-skeleton-watch-pair.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN181"
+   "sku": "AKN072"
   },
   {
-   "id": "akins-steel-burgundy-roman-dial-watch",
-   "name": "Akins Steel Burgundy Roman Dial Watch",
-   "category": "watches",
-   "price": 220000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-burgundy-roman-dial-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN182"
-  },
-  {
-   "id": "akins-rose-gold-navy-roman-dial-watch",
-   "name": "Akins Rose Gold Navy Roman Dial Watch",
-   "category": "watches",
-   "price": 220000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-gold-navy-roman-dial-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN183"
-  },
-  {
-   "id": "akins-rose-gold-noir-roman-dial-watch",
-   "name": "Akins Rose Gold Noir Roman Dial Watch",
-   "category": "watches",
-   "price": 220000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-gold-noir-roman-dial-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN184"
-  },
-  {
-   "id": "akins-steel-emerald-roman-dial-watch",
-   "name": "Akins Steel Emerald Roman Dial Watch",
-   "category": "watches",
-   "price": 220000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-emerald-roman-dial-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN185"
-  },
-  {
-   "id": "akins-rose-gold-ivory-roman-dial-watch",
-   "name": "Akins Rose Gold Ivory Roman Dial Watch",
-   "category": "watches",
-   "price": 220000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-gold-ivory-roman-dial-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN186"
-  },
-  {
-   "id": "akins-steel-slate-roman-dial-watch",
-   "name": "Akins Steel Slate Roman Dial Watch",
-   "category": "watches",
-   "price": 220000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-slate-roman-dial-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN187"
-  },
-  {
-   "id": "akins-rose-gold-forest-roman-dial-watch",
-   "name": "Akins Rose Gold Forest Roman Dial Watch",
-   "category": "watches",
-   "price": 220000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-gold-forest-roman-dial-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN188"
-  },
-  {
-   "id": "akins-steel-ivory-roman-dial-watch",
-   "name": "Akins Steel Ivory Roman Dial Watch",
-   "category": "watches",
-   "price": 220000,
-   "compareAt": null,
-   "image": "images/products/akins-steel-ivory-roman-dial-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN189"
-  },
-  {
-   "id": "akins-steel-pearl-ladies-watch",
-   "name": "Akins Steel Pearl Ladies Watch",
+   "id": "akins-pearl-dial-ladies-watch",
+   "name": "Akins Pearl Dial Ladies Watch",
    "category": "watches",
    "price": 80000,
    "compareAt": null,
-   "image": "images/products/akins-steel-pearl-ladies-watch.jpg",
+   "image": "images/products/akins-pearl-dial-ladies-watch-steel-pearl.jpg",
+   "variants": [
+    {
+     "label": "Steel Pearl",
+     "image": "images/products/akins-pearl-dial-ladies-watch-steel-pearl.jpg"
+    },
+    {
+     "label": "Rose Pearl",
+     "image": "images/products/akins-pearl-dial-ladies-watch-rose-pearl.jpg"
+    },
+    {
+     "label": "Gold Pearl",
+     "image": "images/products/akins-pearl-dial-ladies-watch-gold-pearl.jpg"
+    },
+    {
+     "label": "Gold & Steel Pearl",
+     "image": "images/products/akins-pearl-dial-ladies-watch-gold-steel-pearl.jpg"
+    },
+    {
+     "label": "Rose & Steel Pearl",
+     "image": "images/products/akins-pearl-dial-ladies-watch-rose-steel-pearl.jpg"
+    }
+   ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN190"
-  },
-  {
-   "id": "akins-rose-pearl-ladies-watch",
-   "name": "Akins Rose Pearl Ladies Watch",
-   "category": "watches",
-   "price": 80000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-pearl-ladies-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN191"
-  },
-  {
-   "id": "akins-gold-pearl-ladies-watch",
-   "name": "Akins Gold Pearl Ladies Watch",
-   "category": "watches",
-   "price": 80000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-pearl-ladies-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN192"
-  },
-  {
-   "id": "akins-gold-steel-pearl-ladies-watch",
-   "name": "Akins Gold Steel Pearl Ladies Watch",
-   "category": "watches",
-   "price": 80000,
-   "compareAt": null,
-   "image": "images/products/akins-gold-steel-pearl-ladies-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN193"
-  },
-  {
-   "id": "akins-rose-steel-pearl-ladies-watch",
-   "name": "Akins Rose Steel Pearl Ladies Watch",
-   "category": "watches",
-   "price": 80000,
-   "compareAt": null,
-   "image": "images/products/akins-rose-steel-pearl-ladies-watch.jpg",
-   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
-   "sizes": [],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN194"
+   "sku": "AKN073"
   }
  ]
 };
