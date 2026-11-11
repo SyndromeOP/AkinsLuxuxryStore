@@ -64,7 +64,7 @@ window.AKINS_DATA = {
    "id": "akins-puff-loafers",
    "name": "Akins Puff Loafers",
    "category": "loafers",
-   "price": 140000,
+   "price": 150000,
    "compareAt": null,
    "image": "images/products/akins-puff-loafers-onyx.jpg",
    "variants": [
@@ -96,7 +96,7 @@ window.AKINS_DATA = {
    "id": "akins-suede-loafers",
    "name": "Akins Suede Loafers",
    "category": "loafers",
-   "price": 160000,
+   "price": 180000,
    "compareAt": null,
    "image": "images/products/akins-suede-loafers-cocoa.jpg",
    "variants": [
@@ -128,7 +128,7 @@ window.AKINS_DATA = {
    "id": "akins-buckle-suede-clogs",
    "name": "Akins Buckle Suede Clogs",
    "category": "half-shoes",
-   "price": 130000,
+   "price": 140000,
    "compareAt": null,
    "image": "images/products/akins-buckle-suede-clogs-slate.jpg",
    "variants": [
@@ -164,7 +164,7 @@ window.AKINS_DATA = {
    "id": "akins-triangle-emblem-mules",
    "name": "Akins Triangle Emblem Mules",
    "category": "half-shoes",
-   "price": 130000,
+   "price": 140000,
    "compareAt": null,
    "image": "images/products/akins-triangle-emblem-mules-mocha-sand-noir.jpg",
    "variants": [
@@ -196,7 +196,7 @@ window.AKINS_DATA = {
    "id": "akins-leather-closed-mules",
    "name": "Akins Leather Closed Mules",
    "category": "half-shoes",
-   "price": 130000,
+   "price": 150000,
    "compareAt": null,
    "image": "images/products/akins-leather-closed-mules-noir-ivory.jpg",
    "variants": [
@@ -284,7 +284,7 @@ window.AKINS_DATA = {
    "id": "akins-noir-cross-emblem-mules",
    "name": "Akins Noir Cross Emblem Mules",
    "category": "half-shoes",
-   "price": 130000,
+   "price": 150000,
    "compareAt": null,
    "image": "images/products/akins-noir-cross-emblem-mules.jpg",
    "variants": [
@@ -335,34 +335,6 @@ window.AKINS_DATA = {
    "featured": false,
    "sale": false,
    "sku": "AKN010"
-  },
-  {
-   "id": "akins-noir-split-toe-mules",
-   "name": "Akins Noir Split-Toe Mules",
-   "category": "half-shoes",
-   "price": 130000,
-   "compareAt": null,
-   "image": "images/products/akins-noir-split-toe-mules.jpg",
-   "variants": [
-    {
-     "label": "Noir",
-     "image": "images/products/akins-noir-split-toe-mules.jpg"
-    }
-   ],
-   "description": "Closed-toe half shoe made for easy, stylish everyday wear. Soft footbed and clean finish.",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "featured": false,
-   "sale": false,
-   "sku": "AKN011"
   },
   {
    "id": "akins-signature-h-cutout-leather-slides",
@@ -472,7 +444,7 @@ window.AKINS_DATA = {
    "id": "akins-woven-texture-h-slides",
    "name": "Akins Woven Texture H Slides",
    "category": "slides",
-   "price": 85000,
+   "price": 88000,
    "compareAt": null,
    "image": "images/products/akins-woven-texture-h-slides-noir-sparkle.jpg",
    "variants": [
@@ -816,7 +788,7 @@ window.AKINS_DATA = {
    "id": "akins-padded-comfort-slides",
    "name": "Akins Padded Comfort Slides",
    "category": "slides",
-   "price": 85000,
+   "price": 110000,
    "compareAt": null,
    "image": "images/products/akins-padded-comfort-slides-olive-noir.jpg",
    "variants": [
@@ -904,7 +876,7 @@ window.AKINS_DATA = {
    "id": "akins-trio-band-slides",
    "name": "Akins Trio Band Slides",
    "category": "slides",
-   "price": 85000,
+   "price": 80000,
    "compareAt": null,
    "image": "images/products/akins-trio-band-slides.jpg",
    "variants": [
@@ -1072,7 +1044,7 @@ window.AKINS_DATA = {
    "id": "akins-navy-espadrille-slides",
    "name": "Akins Navy Espadrille Slides",
    "category": "slides",
-   "price": 85000,
+   "price": 75000,
    "compareAt": null,
    "image": "images/products/akins-navy-espadrille-slides.jpg",
    "variants": [
@@ -1100,7 +1072,7 @@ window.AKINS_DATA = {
    "id": "akins-noir-textured-cross-slides",
    "name": "Akins Noir Textured Cross Slides",
    "category": "slides",
-   "price": 85000,
+   "price": 80000,
    "compareAt": null,
    "image": "images/products/akins-noir-textured-cross-slides.jpg",
    "variants": [
@@ -1156,7 +1128,7 @@ window.AKINS_DATA = {
    "id": "akins-retro-4-hi-top-sneakers",
    "name": "Akins Retro 4 Hi-Top Sneakers",
    "category": "sneakers",
-   "price": 240000,
+   "price": 230000,
    "compareAt": null,
    "image": "images/products/akins-retro-4-hi-top-sneakers-white-red.jpg",
    "variants": [
@@ -1236,7 +1208,7 @@ window.AKINS_DATA = {
    "id": "akins-retro-12-hi-top-sneakers",
    "name": "Akins Retro 12 Hi-Top Sneakers",
    "category": "sneakers",
-   "price": 240000,
+   "price": 220000,
    "compareAt": null,
    "image": "images/products/akins-retro-12-hi-top-sneakers-stealth-grey.jpg",
    "variants": [
@@ -1304,7 +1276,7 @@ window.AKINS_DATA = {
    "id": "akins-air-runner-sneakers",
    "name": "Akins Air Runner Sneakers",
    "category": "sneakers",
-   "price": 150000,
+   "price": 200000,
    "compareAt": null,
    "image": "images/products/akins-air-runner-sneakers-crimson.jpg",
    "variants": [
@@ -1344,7 +1316,7 @@ window.AKINS_DATA = {
    "id": "akins-shox-runner-sneakers",
    "name": "Akins Shox Runner Sneakers",
    "category": "sneakers",
-   "price": 150000,
+   "price": 160000,
    "compareAt": null,
    "image": "images/products/akins-shox-runner-sneakers-silver.jpg",
    "variants": [
@@ -1380,7 +1352,7 @@ window.AKINS_DATA = {
    "id": "akins-patent-runner-sneakers",
    "name": "Akins Patent Runner Sneakers",
    "category": "sneakers",
-   "price": 135000,
+   "price": 200000,
    "compareAt": null,
    "image": "images/products/akins-patent-runner-sneakers-burgundy.jpg",
    "variants": [
@@ -1412,7 +1384,7 @@ window.AKINS_DATA = {
    "id": "akins-three-stripe-court-sneakers",
    "name": "Akins Three-Stripe Court Sneakers",
    "category": "sneakers",
-   "price": 150000,
+   "price": 170000,
    "compareAt": null,
    "image": "images/products/akins-three-stripe-court-sneakers-cream-noir.jpg",
    "variants": [
@@ -1484,7 +1456,7 @@ window.AKINS_DATA = {
    "id": "akins-trail-runner-sneakers",
    "name": "Akins Trail Runner Sneakers",
    "category": "sneakers",
-   "price": 250000,
+   "price": 240000,
    "compareAt": null,
    "image": "images/products/akins-trail-runner-sneakers-noir.jpg",
    "variants": [
@@ -1524,7 +1496,7 @@ window.AKINS_DATA = {
    "id": "akins-low-top-dunk-sneakers",
    "name": "Akins Low-Top Dunk Sneakers",
    "category": "sneakers",
-   "price": 150000,
+   "price": 160000,
    "compareAt": null,
    "image": "images/products/akins-low-top-dunk-sneakers-washed-noir.jpg",
    "variants": [
@@ -1560,7 +1532,7 @@ window.AKINS_DATA = {
    "id": "akins-classic-low-court-sneakers",
    "name": "Akins Classic Low Court Sneakers",
    "category": "sneakers",
-   "price": 150000,
+   "price": 160000,
    "compareAt": null,
    "image": "images/products/akins-classic-low-court-sneakers-cream.jpg",
    "variants": [
@@ -1592,7 +1564,7 @@ window.AKINS_DATA = {
    "id": "akins-white-graffiti-low-sneakers",
    "name": "Akins White Graffiti Low Sneakers",
    "category": "sneakers",
-   "price": 150000,
+   "price": 180000,
    "compareAt": null,
    "image": "images/products/akins-white-graffiti-low-sneakers.jpg",
    "variants": [
@@ -1620,7 +1592,7 @@ window.AKINS_DATA = {
    "id": "akins-noir-canvas-low-top-sneakers",
    "name": "Akins Noir Canvas Low-Top Sneakers",
    "category": "sneakers",
-   "price": 150000,
+   "price": 160000,
    "compareAt": null,
    "image": "images/products/akins-noir-canvas-low-top-sneakers.jpg",
    "variants": [
@@ -1648,7 +1620,7 @@ window.AKINS_DATA = {
    "id": "akins-classic-white-trainer-sneakers",
    "name": "Akins Classic White Trainer Sneakers",
    "category": "sneakers",
-   "price": 150000,
+   "price": 220000,
    "compareAt": null,
    "image": "images/products/akins-classic-white-trainer-sneakers.jpg",
    "variants": [
@@ -1704,7 +1676,7 @@ window.AKINS_DATA = {
    "id": "akins-slim-dress-watch",
    "name": "Akins Slim Dress Watch",
    "category": "watches",
-   "price": 120000,
+   "price": 140000,
    "compareAt": null,
    "image": "images/products/akins-slim-dress-watch-gold-burgundy.jpg",
    "variants": [
@@ -1794,7 +1766,7 @@ window.AKINS_DATA = {
    "id": "akins-ocean-blue-diver-watch",
    "name": "Akins Ocean Blue Diver Watch",
    "category": "watches",
-   "price": 180000,
+   "price": 160000,
    "compareAt": null,
    "image": "images/products/akins-ocean-blue-diver-watch.jpg",
    "variants": [
@@ -1813,7 +1785,7 @@ window.AKINS_DATA = {
    "id": "akins-skeleton-tourbillon-dress-watch",
    "name": "Akins Skeleton Tourbillon Dress Watch",
    "category": "watches",
-   "price": 250000,
+   "price": 210000,
    "compareAt": null,
    "image": "images/products/akins-skeleton-tourbillon-dress-watch-noir-steel.jpg",
    "variants": [
@@ -1840,7 +1812,7 @@ window.AKINS_DATA = {
    "id": "akins-perpetual-tourbillon-bracelet-watch",
    "name": "Akins Perpetual Tourbillon Bracelet Watch",
    "category": "watches",
-   "price": 350000,
+   "price": 220000,
    "compareAt": null,
    "image": "images/products/akins-perpetual-tourbillon-bracelet-watch-full-gold.jpg",
    "variants": [
@@ -1867,7 +1839,7 @@ window.AKINS_DATA = {
    "id": "akins-tourbillon-chronograph-leather-watch",
    "name": "Akins Tourbillon Chronograph Leather Watch",
    "category": "watches",
-   "price": 250000,
+   "price": 200000,
    "compareAt": null,
    "image": "images/products/akins-tourbillon-chronograph-leather-watch-noir-chestnut.jpg",
    "variants": [
@@ -1914,7 +1886,7 @@ window.AKINS_DATA = {
    "id": "akins-open-heart-skeleton-watch",
    "name": "Akins Open-Heart Skeleton Watch",
    "category": "watches",
-   "price": 280000,
+   "price": 220000,
    "compareAt": null,
    "image": "images/products/akins-open-heart-skeleton-watch-rose-navy.jpg",
    "variants": [
@@ -1961,7 +1933,7 @@ window.AKINS_DATA = {
    "id": "akins-crystal-skeleton-dress-watch",
    "name": "Akins Crystal Skeleton Dress Watch",
    "category": "watches",
-   "price": 280000,
+   "price": 240000,
    "compareAt": null,
    "image": "images/products/akins-crystal-skeleton-dress-watch-silver.jpg",
    "variants": [
@@ -1988,7 +1960,7 @@ window.AKINS_DATA = {
    "id": "akins-crystal-racer-watch",
    "name": "Akins Crystal Racer Watch",
    "category": "watches",
-   "price": 600000,
+   "price": 420000,
    "compareAt": null,
    "image": "images/products/akins-crystal-racer-watch-red-gold.jpg",
    "variants": [
@@ -2030,7 +2002,7 @@ window.AKINS_DATA = {
    "id": "akins-noir-moonphase-watch",
    "name": "Akins Noir Moonphase Watch",
    "category": "watches",
-   "price": 150000,
+   "price": 190000,
    "compareAt": null,
    "image": "images/products/akins-noir-moonphase-watch.jpg",
    "variants": [
@@ -2049,7 +2021,7 @@ window.AKINS_DATA = {
    "id": "akins-neon-green-sport-watch",
    "name": "Akins Neon Green Sport Watch",
    "category": "watches",
-   "price": 150000,
+   "price": 220000,
    "compareAt": null,
    "image": "images/products/akins-neon-green-sport-watch.jpg",
    "variants": [
@@ -2068,7 +2040,7 @@ window.AKINS_DATA = {
    "id": "akins-slim-retro-leather-watch-trio",
    "name": "Akins Slim Retro Leather Watch Trio",
    "category": "watches",
-   "price": 90000,
+   "price": 130000,
    "compareAt": null,
    "image": "images/products/akins-slim-retro-leather-watch-trio.jpg",
    "variants": [
@@ -2087,7 +2059,7 @@ window.AKINS_DATA = {
    "id": "akins-racer-skeleton-tourbillon-watch",
    "name": "Akins Racer Skeleton Tourbillon Watch",
    "category": "watches",
-   "price": 600000,
+   "price": 450000,
    "compareAt": null,
    "image": "images/products/akins-racer-skeleton-tourbillon-watch-blue.jpg",
    "variants": [
@@ -2118,7 +2090,7 @@ window.AKINS_DATA = {
    "id": "akins-two-tone-jubilee-watch",
    "name": "Akins Two-Tone Jubilee Watch",
    "category": "watches",
-   "price": 350000,
+   "price": 260000,
    "compareAt": null,
    "image": "images/products/akins-two-tone-jubilee-watch-wine.jpg",
    "variants": [
@@ -2157,7 +2129,7 @@ window.AKINS_DATA = {
    "id": "akins-gold-noir-chronograph-watch",
    "name": "Akins Gold Noir Chronograph Watch",
    "category": "watches",
-   "price": 180000,
+   "price": 285000,
    "compareAt": null,
    "image": "images/products/akins-gold-noir-chronograph-watch.jpg",
    "variants": [
@@ -2176,7 +2148,7 @@ window.AKINS_DATA = {
    "id": "akins-iced-out-tonneau-watch",
    "name": "Akins Iced-Out Tonneau Watch",
    "category": "watches",
-   "price": 870000,
+   "price": 300000,
    "compareAt": null,
    "image": "images/products/akins-iced-out-tonneau-watch.jpg",
    "variants": [
@@ -2195,7 +2167,7 @@ window.AKINS_DATA = {
    "id": "akins-two-tone-skeleton-chronograph-watch",
    "name": "Akins Two-Tone Skeleton Chronograph Watch",
    "category": "watches",
-   "price": 220000,
+   "price": 340000,
    "compareAt": null,
    "image": "images/products/akins-two-tone-skeleton-chronograph-watch.jpg",
    "variants": [
@@ -2214,7 +2186,7 @@ window.AKINS_DATA = {
    "id": "akins-rose-gold-octagon-watch",
    "name": "Akins Rose Gold Octagon Watch",
    "category": "watches",
-   "price": 450000,
+   "price": 230000,
    "compareAt": null,
    "image": "images/products/akins-rose-gold-octagon-watch-rose-ivory.jpg",
    "variants": [
@@ -2237,7 +2209,7 @@ window.AKINS_DATA = {
    "id": "akins-crystal-skeleton-watch-with-spare-strap",
    "name": "Akins Crystal Skeleton Watch with Spare Strap",
    "category": "watches",
-   "price": 300000,
+   "price": 385000,
    "compareAt": null,
    "image": "images/products/akins-crystal-skeleton-watch-with-spare-strap.jpg",
    "variants": [
@@ -2256,7 +2228,7 @@ window.AKINS_DATA = {
    "id": "akins-roman-dial-bracelet-watch",
    "name": "Akins Roman Dial Bracelet Watch",
    "category": "watches",
-   "price": 220000,
+   "price": 180000,
    "compareAt": null,
    "image": "images/products/akins-roman-dial-bracelet-watch-steel-burgundy.jpg",
    "variants": [
@@ -2303,7 +2275,7 @@ window.AKINS_DATA = {
    "id": "akins-open-heart-skeleton-watch-pair",
    "name": "Akins Open-Heart Skeleton Watch Pair",
    "category": "watches",
-   "price": 300000,
+   "price": 380000,
    "compareAt": null,
    "image": "images/products/akins-open-heart-skeleton-watch-pair.jpg",
    "variants": [
@@ -2322,7 +2294,7 @@ window.AKINS_DATA = {
    "id": "akins-pearl-dial-ladies-watch",
    "name": "Akins Pearl Dial Ladies Watch",
    "category": "watches",
-   "price": 80000,
+   "price": 120000,
    "compareAt": null,
    "image": "images/products/akins-pearl-dial-ladies-watch-steel-pearl.jpg",
    "variants": [
