@@ -34,7 +34,7 @@ window.AKINS_DATA = {
  "products": [
   {
    "id": "akins-wheat-nubuck-boots",
-   "name": "Akins Wheat Nubuck Boots",
+   "name": "Timberland 6-Inch Premium Wheat Nubuck Boots",
    "category": "boots",
    "price": 190000,
    "compareAt": null,
@@ -1126,7 +1126,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-retro-4-hi-top-sneakers",
-   "name": "Akins Retro 4 Hi-Top Sneakers",
+   "name": "Air Jordan 4 Retro",
    "category": "sneakers",
    "price": 230000,
    "compareAt": null,
@@ -1170,7 +1170,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-retro-3-hi-top-sneakers",
-   "name": "Akins Retro 3 Hi-Top Sneakers",
+   "name": "Air Jordan 3 Retro",
    "category": "sneakers",
    "price": 240000,
    "compareAt": null,
@@ -1206,7 +1206,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-retro-12-hi-top-sneakers",
-   "name": "Akins Retro 12 Hi-Top Sneakers",
+   "name": "Air Jordan 12 Retro",
    "category": "sneakers",
    "price": 220000,
    "compareAt": null,
@@ -1246,7 +1246,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-retro-13-hi-top-sneakers",
-   "name": "Akins Retro 13 Hi-Top Sneakers",
+   "name": "Air Jordan 13 Retro Low",
    "category": "sneakers",
    "price": 230000,
    "compareAt": null,
@@ -1274,7 +1274,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-air-runner-sneakers",
-   "name": "Akins Air Runner Sneakers",
+   "name": "Nike Air Max 90",
    "category": "sneakers",
    "price": 200000,
    "compareAt": null,
@@ -1314,7 +1314,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-shox-runner-sneakers",
-   "name": "Akins Shox Runner Sneakers",
+   "name": "Nike Shox TL",
    "category": "sneakers",
    "price": 160000,
    "compareAt": null,
@@ -1382,7 +1382,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-three-stripe-court-sneakers",
-   "name": "Akins Three-Stripe Court Sneakers",
+   "name": "Adidas Campus 00s",
    "category": "sneakers",
    "price": 170000,
    "compareAt": null,
@@ -1414,7 +1414,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-skate-low-sneakers",
-   "name": "Akins Skate Low Sneakers",
+   "name": "Vans Knu Skool",
    "category": "sneakers",
    "price": 150000,
    "compareAt": null,
@@ -1454,7 +1454,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-trail-runner-sneakers",
-   "name": "Akins Trail Runner Sneakers",
+   "name": "Nike P-6000",
    "category": "sneakers",
    "price": 240000,
    "compareAt": null,
@@ -1530,7 +1530,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-classic-low-court-sneakers",
-   "name": "Akins Classic Low Court Sneakers",
+   "name": "Nike Air Force 1 Low",
    "category": "sneakers",
    "price": 160000,
    "compareAt": null,
@@ -1618,7 +1618,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-classic-white-trainer-sneakers",
-   "name": "Akins Classic White Trainer Sneakers",
+   "name": "Nike Air Monarch IV",
    "category": "sneakers",
    "price": 220000,
    "compareAt": null,
@@ -1646,7 +1646,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-olive-rope-lace-sneakers",
-   "name": "Akins Olive Rope Lace Sneakers",
+   "name": "Nike Air Force 1 Rope Lace",
    "category": "sneakers",
    "price": 150000,
    "compareAt": null,
