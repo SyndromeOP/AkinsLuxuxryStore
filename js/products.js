@@ -62,7 +62,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-puff-loafers",
-   "name": "Akins Puff Loafers",
+   "name": "Milan-Style Puffed Leather Loafers",
    "category": "loafers",
    "price": 150000,
    "compareAt": null,
@@ -94,7 +94,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-suede-loafers",
-   "name": "Akins Suede Loafers",
+   "name": "Riviera-Style Cocoa Suede Loafers",
    "category": "loafers",
    "price": 180000,
    "compareAt": null,
@@ -126,7 +126,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-buckle-suede-clogs",
-   "name": "Akins Buckle Suede Clogs",
+   "name": "Slate Buckle Suede Clogs",
    "category": "half-shoes",
    "price": 140000,
    "compareAt": null,
@@ -162,7 +162,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-triangle-emblem-mules",
-   "name": "Akins Triangle Emblem Mules",
+   "name": "Heritage-Style Triangle Plaque Mules",
    "category": "half-shoes",
    "price": 140000,
    "compareAt": null,
@@ -194,7 +194,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-leather-closed-mules",
-   "name": "Akins Leather Closed Mules",
+   "name": "Studio-Style Leather Closed Mules",
    "category": "half-shoes",
    "price": 150000,
    "compareAt": null,
@@ -226,7 +226,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-cork-footbed-clogs",
-   "name": "Akins Noir Cork Footbed Clogs",
+   "name": "Noir Cork Footbed Leather Clogs",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
@@ -254,7 +254,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-white-flame-clogs",
-   "name": "Akins White Flame Clogs",
+   "name": "Flame-Print Suede Buckle Clogs",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
@@ -282,7 +282,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-cross-emblem-mules",
-   "name": "Akins Noir Cross Emblem Mules",
+   "name": "Noir Split-Toe Cross Mules",
    "category": "half-shoes",
    "price": 150000,
    "compareAt": null,
@@ -310,7 +310,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-crimson-espadrille-mules",
-   "name": "Akins Crimson Espadrille Mules",
+   "name": "Crimson Leather Espadrille Mules",
    "category": "half-shoes",
    "price": 130000,
    "compareAt": null,
@@ -338,7 +338,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-signature-h-cutout-leather-slides",
-   "name": "Akins Signature H-Cutout Leather Slides",
+   "name": "Riviera-Style Cutout Leather Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -442,7 +442,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-woven-texture-h-slides",
-   "name": "Akins Woven Texture H Slides",
+   "name": "Crystal-Weave Cutout Slides",
    "category": "slides",
    "price": 88000,
    "compareAt": null,
@@ -478,7 +478,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-square-buckle-slides",
-   "name": "Akins Square Buckle Slides",
+   "name": "Block Buckle Leather Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -514,7 +514,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-side-buckle-band-slides",
-   "name": "Akins Side Buckle Band Slides",
+   "name": "Capri-Style Side Buckle Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -546,7 +546,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-emblem-cross-slides",
-   "name": "Akins Emblem Cross Slides",
+   "name": "Noir Pebble Leather Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -578,7 +578,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-oblique-print-cross-slides",
-   "name": "Akins Oblique Print Cross Slides",
+   "name": "Oblique-Print Cross-Strap Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -610,7 +610,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-monogram-suede-cross-slides",
-   "name": "Akins Monogram Suede Cross Slides",
+   "name": "Monogram-Embossed Suede Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -642,7 +642,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-embossed-logo-cross-slides",
-   "name": "Akins Embossed Logo Cross Slides",
+   "name": "Raised-Letter Band Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -674,7 +674,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-platform-cross-slides",
-   "name": "Akins Platform Cross Slides",
+   "name": "Platform Suede Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -706,7 +706,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-cross-strap-leather-slides",
-   "name": "Akins Cross Strap Leather Slides",
+   "name": "Noir Cross-Strap Leather Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -754,7 +754,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-buckle-strap-slides",
-   "name": "Akins Buckle Strap Slides",
+   "name": "Buckle Strap Comfort Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -786,7 +786,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-padded-comfort-slides",
-   "name": "Akins Padded Comfort Slides",
+   "name": "Padded Comfort Foam Slides",
    "category": "slides",
    "price": 110000,
    "compareAt": null,
@@ -818,7 +818,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-tri-tone-suede-cross-slides",
-   "name": "Akins Tri-Tone Suede Cross Slides",
+   "name": "Tri-Tone Suede Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -846,7 +846,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-sky-blue-buckle-platform-slides",
-   "name": "Akins Sky Blue Buckle Platform Slides",
+   "name": "Sky Blue Buckle Platform Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -874,7 +874,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-trio-band-slides",
-   "name": "Akins Trio Band Slides",
+   "name": "Jacquard Trio-Band Slides",
    "category": "slides",
    "price": 80000,
    "compareAt": null,
@@ -902,7 +902,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-brown-logo-band-cross-slides",
-   "name": "Akins Brown Logo Band Cross Slides",
+   "name": "Heritage-Style Logo-Band Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -930,7 +930,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-diamond-cross-slides",
-   "name": "Akins Noir Diamond Cross Slides",
+   "name": "Noir Diamond-Plate Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -958,7 +958,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-crest-cross-slides",
-   "name": "Akins Noir Crest Cross Slides",
+   "name": "Noir Crest-Plate Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -986,7 +986,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-caged-slides",
-   "name": "Akins Noir Caged Slides",
+   "name": "Noir Caged Fisherman Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -1014,7 +1014,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-logo-cross-slides",
-   "name": "Akins Noir Logo Cross Slides",
+   "name": "Noir Plaque Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -1042,7 +1042,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-navy-espadrille-slides",
-   "name": "Akins Navy Espadrille Slides",
+   "name": "Navy Suede Espadrille Slides",
    "category": "slides",
    "price": 75000,
    "compareAt": null,
@@ -1070,7 +1070,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-textured-cross-slides",
-   "name": "Akins Noir Textured Cross Slides",
+   "name": "Noir Textured Buckle Cross Slides",
    "category": "slides",
    "price": 80000,
    "compareAt": null,
@@ -1098,7 +1098,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-triangle-cross-slides",
-   "name": "Akins Noir Triangle Cross Slides",
+   "name": "Noir Triangle-Plate Cross Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
@@ -1350,7 +1350,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-patent-runner-sneakers",
-   "name": "Akins Patent Runner Sneakers",
+   "name": "Burgundy Patent Retro Runner Sneakers",
    "category": "sneakers",
    "price": 200000,
    "compareAt": null,
@@ -1494,7 +1494,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-low-top-dunk-sneakers",
-   "name": "Akins Low-Top Dunk Sneakers",
+   "name": "Low-Top Suede Skate-Style Sneakers",
    "category": "sneakers",
    "price": 160000,
    "compareAt": null,
@@ -1562,7 +1562,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-white-graffiti-low-sneakers",
-   "name": "Akins White Graffiti Low Sneakers",
+   "name": "Graffiti-Print White Low Sneakers",
    "category": "sneakers",
    "price": 180000,
    "compareAt": null,
@@ -1590,7 +1590,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-canvas-low-top-sneakers",
-   "name": "Akins Noir Canvas Low-Top Sneakers",
+   "name": "Noir Canvas Vulcanised Low-Tops",
    "category": "sneakers",
    "price": 160000,
    "compareAt": null,
@@ -1674,7 +1674,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-slim-dress-watch",
-   "name": "Akins Slim Dress Watch",
+   "name": "Classic Slim Dress Watch",
    "category": "watches",
    "price": 140000,
    "compareAt": null,
@@ -1737,7 +1737,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-sport-luxe-bracelet-watch",
-   "name": "Akins Sport Luxe Bracelet Watch",
+   "name": "Octagon Sport-Luxe Bracelet Watch",
    "category": "watches",
    "price": 200000,
    "compareAt": null,
@@ -1764,7 +1764,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-ocean-blue-diver-watch",
-   "name": "Akins Ocean Blue Diver Watch",
+   "name": "Ocean Blue Diver Watch",
    "category": "watches",
    "price": 160000,
    "compareAt": null,
@@ -1783,7 +1783,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-skeleton-tourbillon-dress-watch",
-   "name": "Akins Skeleton Tourbillon Dress Watch",
+   "name": "Skeleton Tourbillon-Style Dress Watch",
    "category": "watches",
    "price": 210000,
    "compareAt": null,
@@ -1810,7 +1810,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-perpetual-tourbillon-bracelet-watch",
-   "name": "Akins Perpetual Tourbillon Bracelet Watch",
+   "name": "Gold Perpetual-Style Tourbillon Bracelet Watch",
    "category": "watches",
    "price": 220000,
    "compareAt": null,
@@ -1837,7 +1837,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-tourbillon-chronograph-leather-watch",
-   "name": "Akins Tourbillon Chronograph Leather Watch",
+   "name": "Tourbillon-Style Chronograph Leather Watch",
    "category": "watches",
    "price": 200000,
    "compareAt": null,
@@ -1884,7 +1884,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-open-heart-skeleton-watch",
-   "name": "Akins Open-Heart Skeleton Watch",
+   "name": "Rose Gold Open-Heart Skeleton Watch",
    "category": "watches",
    "price": 220000,
    "compareAt": null,
@@ -1931,7 +1931,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-crystal-skeleton-dress-watch",
-   "name": "Akins Crystal Skeleton Dress Watch",
+   "name": "Crystal Skeleton Dress Watch",
    "category": "watches",
    "price": 240000,
    "compareAt": null,
@@ -1958,7 +1958,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-crystal-racer-watch",
-   "name": "Akins Crystal Racer Watch",
+   "name": "Crystal Case Racer Skeleton Watch",
    "category": "watches",
    "price": 420000,
    "compareAt": null,
@@ -1981,7 +1981,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-iced-out-duo-watch",
-   "name": "Akins Iced-Out Duo Watch",
+   "name": "Iced-Out Duo Bracelet Watch",
    "category": "watches",
    "price": 870000,
    "compareAt": null,
@@ -2000,7 +2000,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-noir-moonphase-watch",
-   "name": "Akins Noir Moonphase Watch",
+   "name": "Noir Moonphase Skeleton Watch",
    "category": "watches",
    "price": 190000,
    "compareAt": null,
@@ -2019,7 +2019,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-neon-green-sport-watch",
-   "name": "Akins Neon Green Sport Watch",
+   "name": "Neon Green Sport Watch",
    "category": "watches",
    "price": 220000,
    "compareAt": null,
@@ -2038,7 +2038,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-slim-retro-leather-watch-trio",
-   "name": "Akins Slim Retro Leather Watch Trio",
+   "name": "Slim Retro Leather Watch Trio",
    "category": "watches",
    "price": 130000,
    "compareAt": null,
@@ -2057,7 +2057,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-racer-skeleton-tourbillon-watch",
-   "name": "Akins Racer Skeleton Tourbillon Watch",
+   "name": "Racer Engine-Style Skeleton Watch",
    "category": "watches",
    "price": 450000,
    "compareAt": null,
@@ -2088,7 +2088,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-two-tone-jubilee-watch",
-   "name": "Akins Two-Tone Jubilee Watch",
+   "name": "Two-Tone Jubilee Bracelet Watch",
    "category": "watches",
    "price": 260000,
    "compareAt": null,
@@ -2127,7 +2127,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-gold-noir-chronograph-watch",
-   "name": "Akins Gold Noir Chronograph Watch",
+   "name": "Gold Noir Chronograph Watch",
    "category": "watches",
    "price": 285000,
    "compareAt": null,
@@ -2146,7 +2146,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-iced-out-tonneau-watch",
-   "name": "Akins Iced-Out Tonneau Watch",
+   "name": "Iced-Out Tonneau Watch",
    "category": "watches",
    "price": 300000,
    "compareAt": null,
@@ -2165,7 +2165,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-two-tone-skeleton-chronograph-watch",
-   "name": "Akins Two-Tone Skeleton Chronograph Watch",
+   "name": "Two-Tone Skeleton Chronograph Watch",
    "category": "watches",
    "price": 340000,
    "compareAt": null,
@@ -2184,7 +2184,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-rose-gold-octagon-watch",
-   "name": "Akins Rose Gold Octagon Watch",
+   "name": "Rose Gold Octagon Rainbow-Bezel Watch",
    "category": "watches",
    "price": 230000,
    "compareAt": null,
@@ -2207,7 +2207,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-crystal-skeleton-watch-with-spare-strap",
-   "name": "Akins Crystal Skeleton Watch with Spare Strap",
+   "name": "Crystal Skeleton Watch with Spare Strap",
    "category": "watches",
    "price": 385000,
    "compareAt": null,
@@ -2226,7 +2226,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-roman-dial-bracelet-watch",
-   "name": "Akins Roman Dial Bracelet Watch",
+   "name": "Roman Dial Bracelet Watch",
    "category": "watches",
    "price": 180000,
    "compareAt": null,
@@ -2273,7 +2273,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-open-heart-skeleton-watch-pair",
-   "name": "Akins Open-Heart Skeleton Watch Pair",
+   "name": "Open-Heart Skeleton Watch Pair",
    "category": "watches",
    "price": 380000,
    "compareAt": null,
@@ -2292,7 +2292,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-pearl-dial-ladies-watch",
-   "name": "Akins Pearl Dial Ladies Watch",
+   "name": "Pearl Dial Ladies Bracelet Watch",
    "category": "watches",
    "price": 120000,
    "compareAt": null,
