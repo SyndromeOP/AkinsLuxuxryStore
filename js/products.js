@@ -2735,7 +2735,7 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-racer-skeleton-tourbillon-watch",
-   "name": "Racer Engine-Style Skeleton Watch",
+   "name": "Black Racer Engine-Style Skeleton Watch",
    "category": "watches",
    "price": 450000,
    "compareAt": null,
@@ -2744,14 +2744,44 @@ window.AKINS_DATA = {
     {
      "label": "Blue",
      "image": "images/products/akins-racer-skeleton-tourbillon-watch-blue.jpg"
-    },
-    {
-     "label": "Rose Gold",
-     "image": "images/products/akins-racer-skeleton-tourbillon-watch-rose-gold.jpg"
-    },
+    }
+   ],
+   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
+   "sizes": [],
+   "featured": false,
+   "sale": false,
+   "sku": "AKN064"
+  },
+  {
+   "id": "akins-rose-gold-racer-engine-style-skeleton-watch",
+   "name": "Rose Gold Racer Engine-Style Skeleton Watch",
+   "category": "watches",
+   "price": 450000,
+   "compareAt": null,
+   "image": "images/products/akins-racer-skeleton-tourbillon-watch-rose-noir.jpg",
+   "variants": [
     {
      "label": "Rose Noir",
      "image": "images/products/akins-racer-skeleton-tourbillon-watch-rose-noir.jpg"
+    }
+   ],
+   "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
+   "sizes": [],
+   "featured": false,
+   "sale": false,
+   "sku": "AKN104"
+  },
+  {
+   "id": "akins-diamond-set-racer-engine-style-skeleton-watch",
+   "name": "Diamond-Set Racer Engine-Style Skeleton Watch",
+   "category": "watches",
+   "price": 450000,
+   "compareAt": null,
+   "image": "images/products/akins-racer-skeleton-tourbillon-watch-rose-gold.jpg",
+   "variants": [
+    {
+     "label": "Rose Gold",
+     "image": "images/products/akins-racer-skeleton-tourbillon-watch-rose-gold.jpg"
     },
     {
      "label": "Red",
@@ -2762,7 +2792,7 @@ window.AKINS_DATA = {
    "sizes": [],
    "featured": false,
    "sale": false,
-   "sku": "AKN064"
+   "sku": "AKN105"
   },
   {
    "id": "akins-gold-noir-chronograph-watch",
