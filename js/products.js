@@ -874,16 +874,40 @@ window.AKINS_DATA = {
   },
   {
    "id": "akins-cross-strap-leather-slides",
-   "name": "Leather Cross-Strap Slides",
+   "name": "Noir Leather Cross-Strap Slides",
    "category": "slides",
    "price": 85000,
    "compareAt": null,
    "image": "images/products/akins-cross-strap-leather-slides-navy.jpg",
    "variants": [
     {
-     "label": "Navy",
+     "label": "Noir",
      "image": "images/products/akins-cross-strap-leather-slides-navy.jpg"
-    },
+    }
+   ],
+   "description": "Premium slides with a cushioned footbed and secure, stylish straps. Easy to wear, built to last.",
+   "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "featured": false,
+   "sale": false,
+   "sku": "AKN021"
+  },
+  {
+   "id": "akins-chocolate-leather-cross-strap-slides",
+   "name": "Chocolate Leather Cross-Strap Slides",
+   "category": "slides",
+   "price": 85000,
+   "compareAt": null,
+   "image": "images/products/akins-cross-strap-leather-slides-chocolate.jpg",
+   "variants": [
     {
      "label": "Chocolate",
      "image": "images/products/akins-cross-strap-leather-slides-chocolate.jpg"
@@ -902,7 +926,7 @@ window.AKINS_DATA = {
    ],
    "featured": false,
    "sale": false,
-   "sku": "AKN021"
+   "sku": "AKN107"
   },
   {
    "id": "akins-graphite-platform-cutout-slides",
@@ -1694,12 +1718,8 @@ window.AKINS_DATA = {
    "category": "sneakers",
    "price": 200000,
    "compareAt": null,
-   "image": "images/products/akins-air-runner-sneakers-tangerine.jpg",
+   "image": "images/products/akins-air-runner-sneakers-noir-mesh.jpg",
    "variants": [
-    {
-     "label": "Tangerine",
-     "image": "images/products/akins-air-runner-sneakers-tangerine.jpg"
-    },
     {
      "label": "Noir Mesh",
      "image": "images/products/akins-air-runner-sneakers-noir-mesh.jpg"
@@ -1719,6 +1739,34 @@ window.AKINS_DATA = {
    "featured": false,
    "sale": false,
    "sku": "AKN090"
+  },
+  {
+   "id": "akins-tangerine-air-unit-sneakers",
+   "name": "Tangerine Air-Unit Sneakers",
+   "category": "sneakers",
+   "price": 200000,
+   "compareAt": null,
+   "image": "images/products/akins-air-runner-sneakers-tangerine.jpg",
+   "variants": [
+    {
+     "label": "Tangerine",
+     "image": "images/products/akins-air-runner-sneakers-tangerine.jpg"
+    }
+   ],
+   "description": "Statement sneakers with premium finish and all-day comfort. Pick your colour and size before ordering.",
+   "sizes": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "featured": false,
+   "sale": false,
+   "sku": "AKN106"
   },
   {
    "id": "akins-shox-runner-sneakers",
@@ -2599,10 +2647,6 @@ window.AKINS_DATA = {
     {
      "label": "Rose Midnight",
      "image": "images/products/akins-open-heart-skeleton-watch-rose-midnight.jpg"
-    },
-    {
-     "label": "Gold Midnight",
-     "image": "images/products/akins-crystal-skeleton-dress-watch-gold-midnight.jpg"
     }
    ],
    "description": "Luxury timepiece with a refined dial and premium finish. Presented in its gift box.",
